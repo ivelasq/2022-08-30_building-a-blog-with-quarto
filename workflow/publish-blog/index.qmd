@@ -22,23 +22,12 @@ Popular publishing services:
 
 : {tbl-colwidths="\[30,70\]"}
 
-### GitHub Pages
+### Quarto Pub
 
-One way of publishing to GitHub Pages is rendering the `docs` directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.
+[Quarto Pub](https://quartopub.com/) is a free publishing service for content created with Quarto. Quarto Pub is ideal for blogs, course or project websites, books, presentations, and personal hobby sites.
 
-#### `_quarto.yml`
+![Front page of QuartoPub website](quartopub.png)
 
-Add project configuration:
+After creating an account, run `quarto publish` in the directory of your blog:
 
-``` yaml
-project:
-  type: website
-  output-dir: docs
-```
-
-Add a `.nojekyll` file:
-
-``` bash
-touch .nojekyll
-```
 
