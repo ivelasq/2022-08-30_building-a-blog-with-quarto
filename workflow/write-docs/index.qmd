@@ -1,0 +1,254 @@
+---
+title: "Document authoring"
+toc: true
+toc_float: true
+image: thumbnail.png
+description: "What goes below the YAML?"
+filters:
+   - lightbox
+lightbox: auto
+---
+
+Quarto, like R Markdown, allows you to do literate programming.
+
+> Literate programming is writing out the program logic in a human language with included (separated by a primitive markup) code snippets and macros.
+>
+> -   [Wikipedia](https://en.wikipedia.org/wiki/Literate_programming)
+
+Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax.
+
+## Components of a Quarto document
+
+<!-- Thanks to the lightbox extension for the below! https://github.com/quarto-ext/lightbox -->
+
+![A Quarto document](doc.png)
+
+::: {#fig-doc-components layout-ncol="3"}
+![YAML](yaml.png){group="my-gallery"}
+
+![Text](text.png){group="my-gallery"}
+
+![Code chunks](code.png){group="my-gallery"}
+:::
+
+## Markdown basics
+
+Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax:
+
+::: column-margin
+Reminder that the visual editor mode in RStudio provides easy ways of authoring in Markdown.
+:::
+
+### Text Formatting
+
++-----------------------------------+-------------------------------+
+| Markdown Syntax                   | Output                        |
++===================================+===============================+
+|     *italics* and **bold**        | *italics* and **bold**        |
++-----------------------------------+-------------------------------+
+|     superscript^2^ / subscript~2~ | superscript^2^ / subscript~2~ |
++-----------------------------------+-------------------------------+
+|     ~~strikethrough~~             | ~~strikethrough~~             |
++-----------------------------------+-------------------------------+
+|     `verbatim code`               | `verbatim code`               |
++-----------------------------------+-------------------------------+
+
+### Headings {#headings}
+
++---------------------+-----------------------------------+
+| Markdown Syntax     | Output                            |
++=====================+===================================+
+|     # Header 1      | # Header 1 {.heading-output}      |
++---------------------+-----------------------------------+
+|     ## Header 2     | ## Header 2 {.heading-output}     |
++---------------------+-----------------------------------+
+|     ### Header 3    | ### Header 3 {.heading-output}    |
++---------------------+-----------------------------------+
+|     #### Header 4   | #### Header 4 {.heading-output}   |
++---------------------+-----------------------------------+
+|     ##### Header 5  | ##### Header 5 {.heading-output}  |
++---------------------+-----------------------------------+
+|     ###### Header 6 | ###### Header 6 {.heading-output} |
++---------------------+-----------------------------------+
+
+### Links & Images
+
+Images can be saved in the folder of your post.
+
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| Markdown Syntax                                               | Output                                                                                                |
++===============================================================+=======================================================================================================+
+|     <https://quarto.org>                                      | <https://quarto.org>                                                                                  |
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+|     [Quarto](https://quarto.org)                              | [Quarto](https://quarto.org)                                                                          |
++---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+|     ![My cat](kitty.jpg)                                     | ![My cat](kitty.jpg){fig-alt="A line drawing of an elephant."}                                     |
+You can also create links between pages on your site:
+
+``` markdown
+[about](about.qmd)
+[about](about.qmd#section)
+```
+
+### Source Code
+
+Use ```` ``` ```` to delimit blocks of source code:
+
+```` markdown
+```
+code
+```
+````
+
+Add syntax highlight code blocks by specifying a language:
+
+```` markdown
+```python
+1 + 1
+```
+````
+
+## Divs and spans
+
+You can add classes, attributes, and other identifiers to regions of content using divs and spans:
+
+### Borders
+
+``` markdown
+::: {.border}
+This content can be styled with a border
+:::
+```
+
+::: border
+This content can be styled with a border
+:::
+
+### Callout notes
+
+``` markdown
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+```
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+### Tabsets
+
+``` markdown
+::: {.panel-tabset}
+## Tab 1
+
+Hello!
+
+## Tab 2
+
+Hello again!
+:::
+```
+
+::: panel-tabset
+## Tab 1
+
+Hello!
+
+## Tab 2
+
+Hello again!
+:::
+
+<h3 align="right">
+
+<a href="https://quarto.org/docs/authoring/markdown-basics.html">Quarto authoring documentation</a> {{< fa arrow-right-long >}}
+
+</h3>
+
+## Using R/Python/Julia/Observable
+
+Quarto supports executable code blocks within markdown.
+
+-   Need to have the appropriate engine installed
+-   Quarto can guess the engine or you can call it explicitly in the YAML
+
+<h3 align="right">
+
+<a href="https://quarto.org/docs/computations/python.html">Quarto computations documentation</a> {{< fa arrow-right-long >}}
+
+</h3>
+
+### Code Blocks
+
+Code blocks that use braces around the language name (e.g. ```{r}```) are executable, and will be run by Quarto during render.
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: Temperature and ozone level.
+#| warning: false
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess"
+)
+```
+
+### Execution options
+
+You can customize executed code with execution options. They can be specified globally:
+
+``` yaml
+---
+title: "My Document"
+execute:
+  echo: false
+jupyter: python3
+---
+```
+
+Or on a per-chunk basis:
+
+```{{python}}
+#| echo: true
+
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4])
+plt.show()
+```
+
+Note the use of the hashpipe `#|` at the top of the chunk.
+
+<h3 align="right">
+
+<a href="https://quarto.org/docs/computations/execution-options.html#output-options">Quarto execution options documentation</a> {{< fa arrow-right-long >}}
+
+</h3>
+
+## Rendering documents
+
+To render, options include:
+
+-   Use the RStudio "Render" button or the "Build" tab
+-   Use the command line interface
+
+``` bash
+quarto render
+```
+
+:::{.callout-note}
+## Try it out!
+
+In the `/post/my-new-post/index.html` file of your Quarto blog:
+
+* Add a heading 1
+* Write some text underneath, including a hyperlink.
+* Add a tabset.
+* Include this code chunk:
+
+```{{r}}
+mtcars |> with(plot(hp, mpg))
+```
+:::
+

@@ -1,0 +1,46 @@
+---
+title: "RStudio & Quarto"
+code-fold: true
+toc: true
+description: "Now that you know what Quarto is, let's explore RStudio's authoring features."
+image: thumbnail.png
+image-alt: Drawing of a tortoiseshell cat in front of a desktop computer.
+filters:
+   - lightbox
+lightbox: auto
+---
+
+::: callout-warning
+To follow along, you'll need:
+
+-   R & RStudio installed (find the latest RStudio release here)
+-   [Quarto](https://quarto.org/docs/get-started/) installed -- Quarto is now included with RStudio v2022.07.1+
+:::
+
+## Using Quarto in the RStudio IDE
+
+### Visual editor
+
+RStudio's visual editor mode includes extensive support for authoring documents.
+
+::: column-page
+
+<script src="https://fast.wistia.com/embed/medias/3ie18ipwnt.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.88% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_3ie18ipwnt videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/3ie18ipwnt/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+
+:::
+
+<h3 align="right"><a href="https://quarto.org/docs/visual-editor/">Visual editor documentation</a> {{< fa arrow-right-long >}}</h3>
+
+### Outline
+
+::: column-page
+<script src="https://fast.wistia.com/embed/medias/u9hyqm2sy1.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:59.38% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_u9hyqm2sy1 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/u9hyqm2sy1/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+:::
+
+## YAML intelligence
+
+YAML code completion is available for project files, YAML front matter, and executable cell options.
+
+::: column-page
+<script src="https://fast.wistia.com/embed/medias/urdhmq5sjd.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:54.79% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_urdhmq5sjd videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/urdhmq5sjd/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+:::

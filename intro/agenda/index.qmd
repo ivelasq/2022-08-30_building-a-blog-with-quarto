@@ -1,0 +1,41 @@
+---
+title: "Agenda"
+date: 2022-08-30
+toc: false
+image: thumbnail.png
+image-alt: "A drawing of a cat waving, text says hello."
+toc_float: true
+description: "The agenda for today's Meetup."
+alt-text: "Poster Calendar (1897) print in high resolution by Edward Penfield. Original from The New York Public Library. Digitally enhanced by rawpixel."
+---
+
+## Today's agenda
+
+-   Why create a blog?
+
+-   Quarto recap
+
+-   How to create a website with Quarto
+
+-   How to create a blog with Quarto
+
+::: callout-warning
+## Assumptions for today
+
+-   You know a bit of R and R Markdown
+-   You know about Quarto and just need a refresher
+-   You'd like to see Quarto in RStudio
+:::
+
+## How to participate
+
+* Website: rst.dio/build-quarto-blog
+
+Want to try the exercises?
+
+-   Clone the GitHub repository and follow along on your computer: rst.dio/quarto-blog-exercise-repo
+-   Work in the RStudio Cloud project: rst.dio/quarto-blog-exercise-cloud
+
+::: column-margin
+Today's recording will be available on YouTube!
+:::

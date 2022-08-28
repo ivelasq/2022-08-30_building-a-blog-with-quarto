@@ -1,0 +1,131 @@
+---
+title: "Create a new post"
+toc: true
+description: "Add to your blog using this workflow."
+image: thumbnail.png
+image-alt: "Drawing of a cat in front of a printing press."
+---
+
+## Creating a new post
+
+```{mermaid}
+%%| fig-width: 8
+%%| fig-cap: New post workflow
+flowchart LR
+  A{Create a new folder under your listing folder} --> B(Create a new blog post with the title `index.qmd` in the folder)
+  A --> C(Optionally, create a `_metadata.yml` file that creates shared metadata for all documents in the folder)
+```
+
+You can create a new folder and `index.qmd` file manually or using the command line:
+
+``` bash
+mkdir posts/new-post
+touch posts/new-post/index.qmd
+```
+
+-   In the default project created by RStudio, the listing folder is called `/posts`.
+-   The folder name will be the "slug" (i.e., part of the URL that identifies the page)
+
+| Post name & location             | Slug                                                |
+|----------------------------------|-----------------------------------------------------|
+| /posts/what-is-quarto/index.qmd  | www.mysitename.com/posts/what-is-quarto             |
+| /posts/what-is-quarto/post01.qmd | www.mysitename.com/posts/what-is-quarto/post01.html |
+
+
+## `/posts` folder
+
+### `_metadata.yml` file
+
+``` yaml
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+```
+
+* `freeze`
+  * `freeze: true`: re-render during project render only when explicitly rerendered
+  * `freeze: auto`: re-render only when source changes
+
+* `title-block-banner`: creates a banner style title block.
+  * Can specify an image or a CSS color (e.g. `"#FFDDFF"` or `red`).
+
+:::{.callout-note}
+## Try it out!
+In the `index.qmd` file of your Quarto blog:
+
+* Change the color of `title-block-banner` to "#FFA500."
+* Visit one of the posts to see the new color.
+:::
+
+### `/posts/index.qmd` file
+
+``` yaml
+---
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2022-08-21"
+categories: [news]
+---
+```
+
+#### `title`
+
+The title of the post.
+
+#### `author`
+
+The author of the post. You can have multiple:
+  
+``` yaml
+author:
+  - Haku
+  - Poki
+  - Pichi
+  - Nagi
+```
+
+#### `date`
+
+The date of the post.
+
+#### `categories`
+
+The enabled categories. You can have multiple:
+  
+``` yaml
+categories:
+  - tutorial
+  - how-to
+```
+
+or in square braces: `[tutorial, how-to]`
+
+#### Drafts
+
+Add `draft: true` to the document options to not include a post in the listing, site map, or site search. For example:
+
+``` yaml
+---
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2022-08-21"
+categories: [news]
+draft: true
+---
+```
+
+<h3 align="right"><a href="https://quarto.org/docs/websites/website-listings.html#listing-fields">Quarto listing fields documentation</a> {{< fa arrow-right-long >}}</h3>
+
+:::{.callout-note}
+## Try it out!
+
+* Create a new post in a folder called `my-first-post` with the title `index.qmd`.
+* Create the YAML for the post: `title`, `author`, and `date`.
+:::
+
+Below the YAML, you will write your post.

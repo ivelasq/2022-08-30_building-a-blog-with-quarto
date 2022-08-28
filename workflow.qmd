@@ -1,0 +1,14 @@
+---
+title: "Workflow"
+listing:
+  id: workflow-listings
+  contents: workflow
+  sort: "title asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+page-navigation: true
+---

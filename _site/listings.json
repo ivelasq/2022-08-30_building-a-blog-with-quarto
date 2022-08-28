@@ -1,0 +1,33 @@
+[
+  {
+    "listing": "/recap.html",
+    "items": [
+      "/recap/what-is-quarto/index.html",
+      "/recap/why-quarto/index.html",
+      "/recap/rstudio-and-quarto/index.html"
+    ]
+  },
+  {
+    "listing": "/intro.html",
+    "items": [
+      "/intro/agenda/index.html",
+      "/intro/why-blog/index.html"
+    ]
+  },
+  {
+    "listing": "/workflow.html",
+    "items": [
+      "/workflow/create-new-post/index.html",
+      "/workflow/write-docs/index.html",
+      "/workflow/publish-blog/index.html"
+    ]
+  },
+  {
+    "listing": "/learn-more.html",
+    "items": [
+      "/learn-more/migration/index.html",
+      "/learn-more/more/index.html",
+      "/learn-more/resources/index.html"
+    ]
+  }
+]

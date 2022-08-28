@@ -1,0 +1,44 @@
+---
+title: "Publishing your blog"
+toc: true
+toc_float: true
+description: "Let's put your work online!"
+filters:
+   - lightbox
+lightbox: auto
+image: thumbnail.png
+image-alt: A simple outline of a cat.
+---
+
+Popular publishing services:
+
+| Destination                            | Description                                                                                                                                                                                     |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Quarto Pub](quarto-pub.qmd)           | Publishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content.                                          |
+| [GitHub Pages](github-pages.qmd)       | Publish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.                                   |
+| [RStudio Connect](rstudio-connect.qmd) | Publishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet. |
+| [Netlify](netlify.qmd)                 | Professional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.                          |
+| [Other Services](other.qmd)            | Content rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don't meet your requirements.               |
+
+: {tbl-colwidths="\[30,70\]"}
+
+### GitHub Pages
+
+One way of publishing to GitHub Pages is rendering the `docs` directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.
+
+#### `_quarto.yml`
+
+Add project configuration:
+
+``` yaml
+project:
+  type: website
+  output-dir: docs
+```
+
+Add a `.nojekyll` file:
+
+``` bash
+touch .nojekyll
+```
+

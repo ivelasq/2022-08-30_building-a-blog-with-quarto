@@ -1,0 +1,49 @@
+---
+title: "Using Quarto for a blog"
+toc: true
+toc_float: true
+image: thumbnail.png
+image-alt: "A cat playing with a printing press."
+description: "Now that you know what Quarto is, let's discuss why you may want to use it for a blog."
+---
+
+## Literate programming with Quarto
+
+```{r}
+#| message = FALSE,
+#| warning = FALSE
+# I write my code here
+# and I see the plot underneath.
+
+library(ggplot2)
+library(dplyr)
+
+palmerpenguins::penguins %>% 
+  ggplot2::ggplot(aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point()
+```
+
+-   Syntax highlighting
+
+-   Executable code
+
+-   Reproducibility
+
+-   Workflow
+
+-   Control
+
+## Do I need to use Quarto to create a blog?
+
+You can keep using blogdown, distill, etc. to create your blog.
+
+<center>
+![](no-cat.gif){fig-alt="Cat shaking its head no, text says no underneath"}
+</center>
+
+> R Markdown is not going away. Rest assured that we will still actively maintain it.
+>
+> Yihui Xie, [With Quarto Coming, is R Markdown Going Away? No](https://yihui.org/en/2022/04/quarto-r-markdown/).
+
+<h3 align="right"><a href="https://quarto.org/docs/faq/rmarkdown.html">FAQ for R Markdown Users</a> {{< fa arrow-right-long >}}</h3>
+

@@ -1,14 +1,20 @@
 ---
-title: "2022-08-30_building-a-blog-with-quarto"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Building a blog with Quarto"
+subtitle: "RStudio Enterprise Community Meetup"
+image: profile.png
+
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: ivelasq3
+      href: https://twitter.com/ivelasq3
+    - icon: linkedin
+      text: ivelasq
+      href: https://linkedin.com/in/ivelasq
+    - icon: github
+      text: ivelasq
+      href: https://github.com/ivelasq
 ---
 
-
+Presented by Isabella Velásquez

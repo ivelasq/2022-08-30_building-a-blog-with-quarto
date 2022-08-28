@@ -1,0 +1,148 @@
+---
+title: "What is Quarto?"
+code-fold: true
+toc: true
+toc_float: true
+image: thumbnail.png
+image-alt: "A confused looking cat in front of a printing press"
+description: "Quarto is an open-source scientific and technical publishing system."
+---
+
+If you haven't seen Tom Mock's webinar, Welcome to Quarto:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yvi5uXQMvu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+::: {#recap-listings}
+:::
+
+## What is Quarto?
+
+Quarto® is an open-source scientific and technical publishing system built on Pandoc.
+
+## How it works
+
+::: panel-tabset
+## knitr
+
+![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc that produces the reports](knitr.png)
+
+## Quarto
+
+![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc with Lua filters that produces the reports](quarto.png)
+:::
+
+## What it can do
+
+### Multilingual literate programming
+
+::: {layout-ncol="2"}
+``` markdown
+---
+title: "matplotlib demo"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```
+
+``` markdown
+---
+title: "ggplot2 demo"
+author: "Norah Jones"
+date: "5/22/2021"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+```
+:::
+
+### Client-side interactivity
+
+```{ojs}
+data = FileAttachment("palmer-penguins.csv").csv({ typed: true })
+
+viewof bill_length_min = Inputs.range(
+  [32, 50], 
+  {value: 35, step: 1, label: "Bill length (min):"}
+)
+viewof islands = Inputs.checkbox(
+  ["Torgersen", "Biscoe", "Dream"], 
+  { value: ["Torgersen", "Biscoe"], 
+    label: "Islands:"
+  }
+)
+
+filtered = data.filter(function(penguin) {
+  return bill_length_min < penguin.bill_length &&
+         islands.includes(penguin.island);
+})
+
+Plot.rectY(filtered, 
+  Plot.binX(
+    {y: "count"}, 
+    {x: "body_mass", fill: "species", thresholds: 20}
+  ))
+  .plot({
+    facet: {
+      data: filtered,
+      x: "sex",
+      y: "species",
+      marginRight: 80
+    },
+    marks: [
+      Plot.frame(),
+    ]
+  }
+)
+```
+
+## Different editors
+
+::: {.grid .step .column-page-right}
+
+::: {.g-col-lg-3 .g-col-12}
+
+### Choose your tool<br/>and get started{.fw-light}
+
+:::
+
+::: {.tool .g-col-lg-9 .g-col-12}
+
+<a href="hello/vscode.html" role="button" class="btn btn-outline-light">
+![](images/vscode-logo.png){width="77" fig-alt="VS Code logo."} VS Code
+</a>
+
+<a href="hello/rstudio.html" role="button" class="btn btn-outline-light">
+![](images/rstudio-logo.png){width="77" fig-alt="RStudio logo."}RStudio
+</a>
+
+<a href="hello/jupyter.html" role="button" class="btn btn-outline-light">
+![](images/jupyter-logo.png){width="77" fig-alt="Jupyter logo."}Jupyter
+</a>
+
+<a href="hello/text-editor.html" role="button" class="btn btn-outline-light">
+![](images/text-editor-logo.png){width="77" fig-alt="Text Editor logo: circle with white outline and black fill inside of which is a command-line prompt."}Text Editor
+</a>
+
+:::
+:::
+
+## Need help?
+
+* See what Quarto can do by running this in your Terminal:
+
+``` bash
+#| collapse = TRUE
+quarto --help
+```
+
+* Report bugs on GitHub: [https://github.com/quarto-dev/quarto-cli](https://github.com/quarto-dev/quarto-cli)
+  * Check out the [Quarto Tip a Day post on asking for help](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/15-help/)
+* Check out the [FAQ](https://quarto.org/docs/faq/)
+* Flag friendly folks on Twitter with #QuartoPub

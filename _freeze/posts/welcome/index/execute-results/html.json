@@ -1,0 +1,14 @@
+{
+  "hash": "6e3a307832fe8ffc99efdafa73bd52a6",
+  "result": {
+    "markdown": "---\ntitle: \"Introduction\"\ncategories: [intro]\n---\n\n\n## Hello!\n\nMy name is Isabella Velásquez.\n\n\n\n\n\n::: {.column-margin}\nKeep in touch!\n\n{{< fa brands twitter size=1.4xl >}}  [ivelasq3](https://twitter.com/ivelasq3)\n\n{{< fa brands linkedin size=1.4xl >}} [ivelasq](https://linkedin.com/in/ivelasq)\n\n{{< fa brands github size=1.4xl >}} [ivelasq](https://github.com/ivelasq)\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

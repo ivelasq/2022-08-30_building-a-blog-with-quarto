@@ -1,0 +1,25 @@
+---
+title: "Introduction"
+listing:
+  id: intro-listings
+  image-align: right
+  contents: intro
+  sort: "title asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+---
+
+Hello!
+
+My name is Isabella Velásquez. Keep in touch!
+
+{{< fa brands twitter size=1.4xl >}} ivelasq3 | {{< fa brands linkedin size=1.4xl >}} ivelasq | {{< fa brands github size=1.4xl >}} ivelasq | {{< fa browser size=1.4xl >}} ivelasq.rbind.io
+
+------------------------------------------------------------------------
+
+::: {#intro-listings}
+:::

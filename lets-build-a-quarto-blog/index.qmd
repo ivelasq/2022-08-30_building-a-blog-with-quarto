@@ -1,0 +1,486 @@
+---
+title: "Let's build a blog with Quarto"
+code-fold: true
+toc: true
+toc-depth: 5
+description: "Quarto blogs are a convenient way to publish listings of documents."
+filters:
+   - lightbox
+lightbox: auto
+---
+
+Websites share:
+
+* navigational elements
+* rendering options
+* visual style
+
+Blogs are a specific type of website:
+
+* listing of posts
+* navigational page that lists them in reverse chronological order
+* publish an RSS feed
+
+## Getting started with a new Quarto blog
+
+Create a new blog in the terminal:
+
+``` bash
+quarto create-project my-new-blog --type website:blog
+```
+
+If you are using RStudio, you can use the New Project command to create a Quarto Blog:
+
+:::{.column-page}
+<script src="https://fast.wistia.com/embed/medias/1ecj0j5kp4.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:61.88% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_1ecj0j5kp4 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/1ecj0j5kp4/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+:::
+
+## Preview and render your blog
+
+* To preview the site, use the `preview` command in the terminal:
+
+``` bash
+quarto preview mysite
+```
+
+The development server will automatically re-render input files whenever they change.
+
+* To render the site, use the `render` command in the terminal:
+
+``` bash
+quarto render mysite
+```
+
+Make sure to render before pushing up changes!
+
+If you are using RStudio, you can do this in the IDE's Build tab. Be sure to check "Render on Save":
+
+:::{.column-page}
+<script src="https://fast.wistia.com/embed/medias/n1urt9741k.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:60.63% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_n1urt9741k videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/n1urt9741k/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+:::
+<br>
+<br>
+
+:::{.callout-note}
+## Try it out!
+
+* Create a new blog using the RStudio wizard and preview the site
+* Or, open the RStudio Cloud project and preview the site
+:::
+
+## Quarto blog files
+
+When you create a new blog, you will see files automatically populated in your directory:
+
+``` bash
+Creating project at myblog:
+  - Created _quarto.yml
+  - Created index.qmd
+  - Created posts/welcome/index.qmd
+  - Created posts/post-with-code/index.qmd
+  - Created about.qmd
+  - Created styles.css
+  - Created posts/_metadata.yml
+```
+
+| File                  | Description                |
+|:----------------------|:---------------------------|
+| `_quarto.yml`         | Quarto project file.       |
+| `index.qmd`           | Blog home page.            |
+| `about.qmd`           | Blog about page.           |
+| `posts/`              | Directory containing posts |
+| `posts/_metadata.yml` | Shared options for `posts` |
+| `styles.css`          | Custom CSS for website     |
+
+### index.qmd: Blog home page
+
+`index.qmd` will be the landing page for your site.
+
+* When creating a new blog, it will default to the listing page for the documents in the `posts` directory.
+* If you prefer that the About page is your landing page, you can rename your `index.qmd` to `posts.qmd` and `about.qmd` to `index.qmd`.
+
+``` yaml
+---
+title: "my-new-blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+```
+
+Let's go through each line:
+
+#### `title`
+
+The title of your listing page.
+
+#### `listing`
+
+`listings` generates the contents of a page (or region of a page) from a set of Quarto documents or other custom data.
+
+#### `contents`
+
+`contents` control what documents are included in the listing by specifying a set of input files.
+
+#### `sort`
+
+`sort` controls the order of the listing.
+
+#### `type`
+
+`type` controls how the listings look.
+  
+Three default styles:
+
+::: {.column-screen-inset}
+
+::: {layout-ncol=3}
+![Grid](grid.png){group="listing"}
+
+![Table](table.png){group="listing"}
+
+![Default](default.png){group="listing"}
+:::
+
+:::
+
+You can write custom listings in Embedded JavaScript templating (EJS).
+
+Tooting my own horn:
+
+[![Listing made with EJS on ivelasq.rbind.io](images/Screen%20Shot%202022-08-24%20at%2011.04.14%20PM.png)](https://ivelasq.rbind.io)
+
+#### `categories`
+
+`categories` display the categories for your posts. The categories are read from the YAML of the documents included in the listing. 
+
+#### `sort-ui`
+
+`sort-ui` provides a sorting box for readers.
+
+#### `filter-ui`
+
+`filter-ui` provides a filtering box for readers.
+  
+#### `page-layout`
+
+`page-layout` controls the layout used.
+
+#### `title-block-banner`
+
+`title-block-banner` positions a formatted title block at the start of the article.
+
+:::{.callout-note}
+## Try it out!
+
+In the `index.qmd` file of your Quarto blog:
+
+* Change the title of your listing page.
+* Choose another listing type.
+* Change the `sort` option to `date asc`.
+* What happens when you change `filter-ui` to `true`?
+:::
+
+### about.qmd: Blog about page
+
+The `about.qmd` document includes additional information on the blog and its author. 
+
+``` yaml
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+```
+
+Let's go through each line:
+
+#### `title`
+
+The title of your About page.
+
+#### `image`
+
+The image for the About page.
+
+#### `about`
+
+The option to create an About page.
+
+#### `template`
+
+`template` controls how the About page looks.
+
+Five built-in templates:
+
+::: {.panel-tabset}
+
+## Jolla
+
+![Jolla](jolla.png){group="about"}
+
+## Trestles
+
+![Trestles](trestles.png){group="about"}
+
+## Solana
+
+![Solana](solana.png){group="about"}
+
+## Marquee
+
+![Marquee](marquee.png){group="about"}
+
+## Broadside
+
+![Broadside](broadside.png){group="about"}
+
+:::
+
+#### `links`
+
+A set of links to other resources.
+
+#### `href`
+
+Link to file contained with the project or an external URL.
+
+#### `text`
+
+Text to display for navigation item
+
+#### `icon`
+
+One of the standard Bootstrap 5 icons
+  
+:::{.callout-note}
+## Try it out!
+
+In the `about.qmd` file of your Quarto blog:
+
+* Change the title of the page.
+* Change the template to `marquee`.
+* Update the links to your profiles pages.
+:::
+
+### _quarto.yml: Quarto project file
+
+The `_quarto.yml` file is the configuration file for your website.
+
+::: {.column-margin}
+The Quarto documentation lists the [possible top navigation options](https://quarto.org/docs/websites/website-navigation.html#top-navigation).
+:::
+
+``` yaml
+project:
+  type: website
+
+website:
+  title: "my-new-blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: visual
+```
+
+Let's go through each line:
+
+#### `project`
+
+The type of project (vs book, etc.).
+
+#### `title`
+
+The title of your blog. 
+
+#### `navbar`
+
+The navigation bar at the top of your website.
+
+#### `right`
+
+The option to specify items for the right side of the navbar.
+
+#### `- about.qmd`
+
+The file to be linked. The title will default to the document's title.
+
+#### `- icon`
+
+The icon to be shown.
+
+#### `href`
+
+The link associated with the icon.
+    
+There are other options available for the top level navigation. For example, if we want to change the background to an orange, we could add:
+
+``` yaml
+  navbar:
+    background: "#C45508"
+```
+:::{.callout-important appearance="simple"}
+Make sure that you are indenting correctly!
+:::
+
+There are also other options for the individual navigation items. For example, if we want to add text to the right side:
+
+``` yaml
+  navbar:
+    right:
+      - text: "my name here"
+```
+
+<h3 align="right"><a href="https://quarto.org/docs/websites/website-navigation.html#top-navigation">Quarto top navigation documentation</a> {{< fa arrow-right-long >}}</h3>
+
+:::{.callout-note}
+## Try it out!
+
+In the `_quarto.yml` file of your Quarto blog:
+
+* Change the background to a different color.
+* Add another hyperlink in the navigation bar.
+* Add your name to the **left** side of the navigation bar.
+:::
+
+#### Themes
+
+This section adds your theme.
+
+::: {.column-margin}
+The 25 Bootswatch theme names:
+
+* default
+* cerulean
+* cosmo
+* cyborg
+* darkly
+* flatly
+* journal
+* litera
+* lumen
+* lux
+* materia
+* minty
+* morph
+* pulse
+* quartz
+* sandstone
+* simplex
+* sketchy
+* slate
+* solar
+* spacelab
+* superhero
+* united
+* vapor
+* yeti
+* zephyr
+:::
+
+``` yaml
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+```
+
+Blogs can use any of the 25 Bootswatch themes included with Quarto, or you can create your own theme.
+
+#### Dark themes
+
+Quarto websites also support light and dark themes. A toggle will allow your reader to select the desired appearance.
+
+Specify under `theme`:
+
+``` yaml
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+```
+
+#### Syntax highlighting
+
+You can also change the syntax highlighting for your code blocks. Run the below to see all the options:
+
+``` bash
+quarto pandoc --list-highlight-languages
+```
+
+Specify the syntax highlighting style by specifying `highlight-style` under theme:
+
+``` yaml
+format:
+  html:
+    theme:
+      light: litera
+      dark: darkly
+    css: styles.scss
+    highlight-style: tango
+```
+
+:::{.callout-note}
+## Try it out!
+
+In the `_quarto.yml` file of your Quarto blog:
+
+* Change to another Bootswatch theme.
+* Add a dark theme with another Bootswatch theme.
+* Change the syntax highlighting to `a11y.`
+:::
+
+
+#### styles.css: Custom CSS for website
+
+This is the CSS stylesheet for your website.
+
+* Can also use `.scss` file.
+
+:::{.callout-note}
+## Try it out!
+
+In the `styles.css` file of your Quarto blog:
+
+* Add:
+``` html
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Pacifico&display=swap');
+
+h1.title {
+  font-family: "Pacifico";
+  font-size: 30px;
+}
+```
+
+And preview your blog.
+:::
+
+Now you have build a blog with Quarto! 🎉

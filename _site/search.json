@@ -1,0 +1,303 @@
+[
+  {
+    "objectID": "recap/rstudio-and-quarto/index.html",
+    "href": "recap/rstudio-and-quarto/index.html",
+    "title": "RStudio & Quarto",
+    "section": "",
+    "text": "Warning\n\n\n\nTo follow along, you’ll need:\n\nR & RStudio installed (find the latest RStudio release here)\nQuarto installed – Quarto is now included with RStudio v2022.07.1+"
+  },
+  {
+    "objectID": "recap/rstudio-and-quarto/index.html#using-quarto-in-the-rstudio-ide",
+    "href": "recap/rstudio-and-quarto/index.html#using-quarto-in-the-rstudio-ide",
+    "title": "RStudio & Quarto",
+    "section": "Using Quarto in the RStudio IDE",
+    "text": "Using Quarto in the RStudio IDE\n\nVisual editor\nRStudio’s visual editor mode includes extensive support for authoring documents.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisual editor documentation \n\n\n\nOutline"
+  },
+  {
+    "objectID": "recap/rstudio-and-quarto/index.html#yaml-intelligence",
+    "href": "recap/rstudio-and-quarto/index.html#yaml-intelligence",
+    "title": "RStudio & Quarto",
+    "section": "YAML intelligence",
+    "text": "YAML intelligence\nYAML code completion is available for project files, YAML front matter, and executable cell options."
+  },
+  {
+    "objectID": "recap/why-quarto/index.html",
+    "href": "recap/why-quarto/index.html",
+    "title": "Using Quarto for a blog",
+    "section": "",
+    "text": "# I write my code here\n# and I see the plot underneath.\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\npalmerpenguins::penguins %>% \n  ggplot2::ggplot(aes(x = bill_length_mm, y = bill_depth_mm)) +\n  geom_point()\n\n\n\n\n\nSyntax highlighting\nExecutable code\nReproducibility\nWorkflow\nControl"
+  },
+  {
+    "objectID": "recap/why-quarto/index.html#do-i-need-to-use-quarto-to-create-a-blog",
+    "href": "recap/why-quarto/index.html#do-i-need-to-use-quarto-to-create-a-blog",
+    "title": "Using Quarto for a blog",
+    "section": "Do I need to use Quarto to create a blog?",
+    "text": "Do I need to use Quarto to create a blog?\nYou can keep using blogdown, distill, etc. to create your blog.\n\n\n\n\nR Markdown is not going away. Rest assured that we will still actively maintain it.\nYihui Xie, With Quarto Coming, is R Markdown Going Away? No.\n\n\nFAQ for R Markdown Users"
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html",
+    "href": "recap/what-is-quarto/index.html",
+    "title": "What is Quarto?",
+    "section": "",
+    "text": "If you haven’t seen Tom Mock’s webinar, Welcome to Quarto:"
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html#what-is-quarto",
+    "href": "recap/what-is-quarto/index.html#what-is-quarto",
+    "title": "What is Quarto?",
+    "section": "What is Quarto?",
+    "text": "What is Quarto?\nQuarto® is an open-source scientific and technical publishing system built on Pandoc."
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html#how-it-works",
+    "href": "recap/what-is-quarto/index.html#how-it-works",
+    "title": "What is Quarto?",
+    "section": "How it works",
+    "text": "How it works\n\nknitrQuarto\n\n\n\n\n\nA diagram of how the knitr package works, from Rmd file to knitr to md to pandoc that produces the reports\n\n\n\n\n\n\n\nA diagram of how the knitr package works, from Rmd file to knitr to md to pandoc with Lua filters that produces the reports"
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html#what-it-can-do",
+    "href": "recap/what-is-quarto/index.html#what-it-can-do",
+    "title": "What is Quarto?",
+    "section": "What it can do",
+    "text": "What it can do\n\nMultilingual literate programming\n\n\n\n---\ntitle: \"matplotlib demo\"\nformat:\n  html:\n    code-fold: true\njupyter: python3\n---\n\n\n---\ntitle: \"ggplot2 demo\"\nauthor: \"Norah Jones\"\ndate: \"5/22/2021\"\nformat: \n  html:\n    fig-width: 8\n    fig-height: 4\n    code-fold: true\n---\n\n\n\n\n\nClient-side interactivity\n\n\nCode\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length &&\n         islands.includes(penguin.island);\n})\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)"
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html#different-editors",
+    "href": "recap/what-is-quarto/index.html#different-editors",
+    "title": "What is Quarto?",
+    "section": "Different editors",
+    "text": "Different editors\n\n\nChoose your tooland get started\n\n\n  VS Code \n RStudio \n Jupyter \n Text Editor"
+  },
+  {
+    "objectID": "recap/what-is-quarto/index.html#need-help",
+    "href": "recap/what-is-quarto/index.html#need-help",
+    "title": "What is Quarto?",
+    "section": "Need help?",
+    "text": "Need help?\n\nSee what Quarto can do by running this in your Terminal:\n\n#| collapse = TRUE\nquarto --help\n\nReport bugs on GitHub: https://github.com/quarto-dev/quarto-cli\n\nCheck out the Quarto Tip a Day post on asking for help\n\nCheck out the FAQ\nFlag friendly folks on Twitter with #QuartoPub"
+  },
+  {
+    "objectID": "recap.html",
+    "href": "recap.html",
+    "title": "Recap",
+    "section": "",
+    "text": "Quarto is an open-source scientific and technical publishing system.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nNow that you know what Quarto is, let’s discuss why you may want to use it for a blog.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nNow that you know what Quarto is, let’s explore RStudio’s authoring features.\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "lets-build-a-quarto-blog/index.html",
+    "href": "lets-build-a-quarto-blog/index.html",
+    "title": "Let’s build a blog with Quarto",
+    "section": "",
+    "text": "Websites share:\nBlogs are a specific type of website:"
+  },
+  {
+    "objectID": "lets-build-a-quarto-blog/index.html#getting-started-with-a-new-quarto-blog",
+    "href": "lets-build-a-quarto-blog/index.html#getting-started-with-a-new-quarto-blog",
+    "title": "Let’s build a blog with Quarto",
+    "section": "Getting started with a new Quarto blog",
+    "text": "Getting started with a new Quarto blog\nCreate a new blog in the terminal:\nquarto create-project my-new-blog --type website:blog\nIf you are using RStudio, you can use the New Project command to create a Quarto Blog:"
+  },
+  {
+    "objectID": "lets-build-a-quarto-blog/index.html#preview-and-render-your-blog",
+    "href": "lets-build-a-quarto-blog/index.html#preview-and-render-your-blog",
+    "title": "Let’s build a blog with Quarto",
+    "section": "Preview and render your blog",
+    "text": "Preview and render your blog\n\nTo preview the site, use the preview command in the terminal:\n\nquarto preview mysite\nThe development server will automatically re-render input files whenever they change.\n\nTo render the site, use the render command in the terminal:\n\nquarto render mysite\nMake sure to render before pushing up changes!\nIf you are using RStudio, you can do this in the IDE’s Build tab. Be sure to check “Render on Save”:\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nTry it out!\n\n\n\n\nCreate a new blog using the RStudio wizard and preview the site\nOr, open the RStudio Cloud project and preview the site"
+  },
+  {
+    "objectID": "lets-build-a-quarto-blog/index.html#quarto-blog-files",
+    "href": "lets-build-a-quarto-blog/index.html#quarto-blog-files",
+    "title": "Let’s build a blog with Quarto",
+    "section": "Quarto blog files",
+    "text": "Quarto blog files\nWhen you create a new blog, you will see files automatically populated in your directory:\nCreating project at myblog:\n  - Created _quarto.yml\n  - Created index.qmd\n  - Created posts/welcome/index.qmd\n  - Created posts/post-with-code/index.qmd\n  - Created about.qmd\n  - Created styles.css\n  - Created posts/_metadata.yml\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nBlog home page.\n\n\nabout.qmd\nBlog about page.\n\n\nposts/\nDirectory containing posts\n\n\nposts/_metadata.yml\nShared options for posts\n\n\nstyles.css\nCustom CSS for website\n\n\n\n\nindex.qmd: Blog home page\nindex.qmd will be the landing page for your site.\n\nWhen creating a new blog, it will default to the listing page for the documents in the posts directory.\nIf you prefer that the About page is your landing page, you can rename your index.qmd to posts.qmd and about.qmd to index.qmd.\n\n---\ntitle: \"my-new-blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  sort-ui: false\n  filter-ui: false\npage-layout: full\ntitle-block-banner: true\n---\nLet’s go through each line:\n\ntitle\nThe title of your listing page.\n\n\nlisting\nlistings generates the contents of a page (or region of a page) from a set of Quarto documents or other custom data.\n\n\ncontents\ncontents control what documents are included in the listing by specifying a set of input files.\n\n\nsort\nsort controls the order of the listing.\n\n\ntype\ntype controls how the listings look.\nThree default styles:\n\n\n\n\n\n\nGrid\n\n\n\n\n\nTable\n\n\n\n\n\nDefault\n\n\n\n\n\nYou can write custom listings in Embedded JavaScript templating (EJS).\nTooting my own horn:\n\n\n\nListing made with EJS on ivelasq.rbind.io\n\n\n\n\ncategories\ncategories display the categories for your posts. The categories are read from the YAML of the documents included in the listing.\n\n\nsort-ui\nsort-ui provides a sorting box for readers.\n\n\nfilter-ui\nfilter-ui provides a filtering box for readers.\n\n\npage-layout\npage-layout controls the layout used.\n\n\ntitle-block-banner\ntitle-block-banner positions a formatted title block at the start of the article.\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the index.qmd file of your Quarto blog:\n\nChange the title of your listing page.\nChoose another listing type.\nChange the sort option to date asc.\nWhat happens when you change filter-ui to true?\n\n\n\n\n\n\nabout.qmd: Blog about page\nThe about.qmd document includes additional information on the blog and its author.\n---\ntitle: \"About\"\nimage: profile.jpg\nabout:\n  template: jolla\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com\n    - icon: github\n      text: Github\n      href: https://github.com\n\n---\nLet’s go through each line:\n\ntitle\nThe title of your About page.\n\n\nimage\nThe image for the About page.\n\n\nabout\nThe option to create an About page.\n\n\ntemplate\ntemplate controls how the About page looks.\nFive built-in templates:\n\nJollaTrestlesSolanaMarqueeBroadside\n\n\n\n\n\nJolla\n\n\n\n\n\n\n\nTrestles\n\n\n\n\n\n\n\nSolana\n\n\n\n\n\n\n\nMarquee\n\n\n\n\n\n\n\nBroadside\n\n\n\n\n\n\n\nlinks\nA set of links to other resources.\n\n\nhref\nLink to file contained with the project or an external URL.\n\n\ntext\nText to display for navigation item\n\n\nicon\nOne of the standard Bootstrap 5 icons\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the about.qmd file of your Quarto blog:\n\nChange the title of the page.\nChange the template to marquee.\nUpdate the links to your profiles pages.\n\n\n\n\n\n\n_quarto.yml: Quarto project file\nThe _quarto.yml file is the configuration file for your website.\n\n\nThe Quarto documentation lists the possible top navigation options.\nproject:\n  type: website\n\nwebsite:\n  title: \"my-new-blog\"\n  navbar:\n    right:\n      - about.qmd\n      - icon: github\n        href: https://github.com/\n      - icon: twitter\n        href: https://twitter.com\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n\neditor: visual\nLet’s go through each line:\n\nproject\nThe type of project (vs book, etc.).\n\n\ntitle\nThe title of your blog.\n\n\nnavbar\nThe navigation bar at the top of your website.\n\n\nright\nThe option to specify items for the right side of the navbar.\n\n\n- about.qmd\nThe file to be linked. The title will default to the document’s title.\n\n\n- icon\nThe icon to be shown.\n\n\nhref\nThe link associated with the icon.\nThere are other options available for the top level navigation. For example, if we want to change the background to an orange, we could add:\n  navbar:\n    background: \"#C45508\"\n\n\n\n\n\n\nMake sure that you are indenting correctly!\n\n\n\nThere are also other options for the individual navigation items. For example, if we want to add text to the right side:\n  navbar:\n    right:\n      - text: \"my name here\"\n\nQuarto top navigation documentation \n\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the _quarto.yml file of your Quarto blog:\n\nChange the background to a different color.\nAdd another hyperlink in the navigation bar.\nAdd your name to the left side of the navigation bar.\n\n\n\n\n\nThemes\nThis section adds your theme.\n\n\nThe 25 Bootswatch theme names:\n\ndefault\ncerulean\ncosmo\ncyborg\ndarkly\nflatly\njournal\nlitera\nlumen\nlux\nmateria\nminty\nmorph\npulse\nquartz\nsandstone\nsimplex\nsketchy\nslate\nsolar\nspacelab\nsuperhero\nunited\nvapor\nyeti\nzephyr\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\nBlogs can use any of the 25 Bootswatch themes included with Quarto, or you can create your own theme.\n\n\nDark themes\nQuarto websites also support light and dark themes. A toggle will allow your reader to select the desired appearance.\nSpecify under theme:\nformat:\n  html:\n    theme: \n      light: cosmo\n      dark: darkly\n\n\nSyntax highlighting\nYou can also change the syntax highlighting for your code blocks. Run the below to see all the options:\nquarto pandoc --list-highlight-languages\nSpecify the syntax highlighting style by specifying highlight-style under theme:\nformat:\n  html:\n    theme:\n      light: litera\n      dark: darkly\n    css: styles.scss\n    highlight-style: tango\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the _quarto.yml file of your Quarto blog:\n\nChange to another Bootswatch theme.\nAdd a dark theme with another Bootswatch theme.\nChange the syntax highlighting to a11y.\n\n\n\n\n\nstyles.css: Custom CSS for website\nThis is the CSS stylesheet for your website.\n\nCan also use .scss file.\n\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the styles.css file of your Quarto blog:\n\nAdd:\n\n@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Pacifico&display=swap');\n\nh1.title {\n  font-family: \"Pacifico\";\n  font-size: 30px;\n}\nAnd preview your blog.\n\n\nNow you have build a blog with Quarto! 🎉"
+  },
+  {
+    "objectID": "intro/why-blog/index.html",
+    "href": "intro/why-blog/index.html",
+    "title": "Why a blog?",
+    "section": "",
+    "text": "Thank you to the Quarto Lightbox extension!\n\n\n\n\n\n\n\nRStudio Community Forum\n\n\n\n\n\n(a) RStudio Solutions Documentation\n\n\n\n\n\nJulia Silge Blog\n\n\n\nFigure 1: Example Websites"
+  },
+  {
+    "objectID": "intro/why-blog/index.html#why-build-a-blog",
+    "href": "intro/why-blog/index.html#why-build-a-blog",
+    "title": "Why a blog?",
+    "section": "Why build a blog?",
+    "text": "Why build a blog?\nIt’s time to share what you know!\n\n\n\nWhen you’ve written the same code 3 times, write a functionWhen you’ve given the same in-person advice 3 times, write a blog post\n\n— David Robinson (@drob) November 9, 2017\n\n\n\n\n\nCheck out this YouTube playlist with great talks on blogging!\n\nA blog can help showcase…\n\n\n\n\n\n\n\nCollaboration\n\nShare what you’ve learned\nWrite about your opinions\nGive updates and news\n\n\n\nCommunication\n\nPractice writing\nCreate a portfolio of work\nCentralization of information\n\n\n\n\n\n\n\n\n\n\n\nDanielle Navarro\n\n\n\n\n\nLydia Gibson\n\n\n\n\n\nShamsuddeen Hassan Muhammad\n\n\n\nFigure 2: Example Blogs"
+  },
+  {
+    "objectID": "intro/why-blog/index.html#what-sorts-of-posts-can-you-consider",
+    "href": "intro/why-blog/index.html#what-sorts-of-posts-can-you-consider",
+    "title": "Why a blog?",
+    "section": "What sorts of posts can you consider?",
+    "text": "What sorts of posts can you consider?\n\nStandard lists\nProfiles\nHow-to/tutorials\nNews posts\nProblems-and-solutions\nCase studies\nComparison posts\nStories\nOpen questions\nInspiration\nResearch\nFAQ\nReviews\nInterviews\nCheat sheets\nChecklists\nInfographics\nDebates\nPresentations"
+  },
+  {
+    "objectID": "intro/why-blog/index.html#what-to-include",
+    "href": "intro/why-blog/index.html#what-to-include",
+    "title": "Why a blog?",
+    "section": "What to include?",
+    "text": "What to include?\nBlog posts are about finding a sweet spot in terms of length, media, and other formats and features that resonate with your audience.\n\n\n\nI made a listing page using #QuartoPub to showcase my public slide decks! https://t.co/ZO144Os1rHIf you’re curious about the how, I included resources in PR 8 https://t.co/rMeUcCvK2bThe magic is in the metadata.yml file that points to each deck https://t.co/zdOmi7P81f #RStats\n\n— Silvia Canelón (@spcanelon) August 26, 2022"
+  },
+  {
+    "objectID": "intro/why-blog/index.html#what-to-consider",
+    "href": "intro/why-blog/index.html#what-to-consider",
+    "title": "Why a blog?",
+    "section": "What to consider?",
+    "text": "What to consider?\nImportant to consider when creating a blog:\n\nGoals and purpose\nValues\nValuable and relevant content\nWorkflows and maintenance\nTechnical stuff, too!\n\n:Note for internal blogs\n\n\nThank you to the Quarto Nutshell extension by David Schoch!"
+  },
+  {
+    "objectID": "intro/why-blog/index.html#x-invisible",
+    "href": "intro/why-blog/index.html#x-invisible",
+    "title": "Why a blog?",
+    "section": ":x invisible",
+    "text": ":x invisible\nWe’re not going to be going too in depth on internal blogs at organizations today, but there are other things to note for those types of blogs.\n\nBuy-in and ownership\nGuardrails\nNorms and feedback\n\nWatch my previous talk, Building a blog with R, to hear me go into detail about these considerations."
+  },
+  {
+    "objectID": "intro/agenda/index.html",
+    "href": "intro/agenda/index.html",
+    "title": "Agenda",
+    "section": "",
+    "text": "Why create a blog?\nQuarto recap\nHow to create a website with Quarto\nHow to create a blog with Quarto\n\n\n\n\n\n\n\nAssumptions for today\n\n\n\n\nYou know a bit of R and R Markdown\nYou know about Quarto and just need a refresher\nYou’d like to see Quarto in RStudio"
+  },
+  {
+    "objectID": "intro/agenda/index.html#how-to-participate",
+    "href": "intro/agenda/index.html#how-to-participate",
+    "title": "Agenda",
+    "section": "How to participate",
+    "text": "How to participate\n\nWebsite: rst.dio/build-quarto-blog\n\nWant to try the exercises?\n\nClone the GitHub repository and follow along on your computer: rst.dio/quarto-blog-exercise-repo\nWork in the RStudio Cloud project: rst.dio/quarto-blog-exercise-cloud\n\n\n\n\n\nToday’s recording will be available on YouTube!"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "My name is Isabella Velásquez. Keep in touch!\n ivelasq3 |  ivelasq |  ivelasq |  ivelasq.rbind.io\n\n\n\n\n\n  \n\n\n\n\nAgenda\n\n\n\n\n\nThe agenda for today’s Meetup.\n\n\n\n\n\n\nAug 30, 2022\n\n\n\n\n\n\n  \n\n\n\n\nWhy a blog?\n\n\n\n\n\nBefore we dive in to using Quarto, you may be wondering, why should I build a blog in the first place?\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "learn-more/more/index.html",
+    "href": "learn-more/more/index.html",
+    "title": "Extend your blog",
+    "section": "",
+    "text": "Include an RSS feed to syndicate your content to feed readers and other websites."
+  },
+  {
+    "objectID": "learn-more/more/index.html#subscriptions",
+    "href": "learn-more/more/index.html#subscriptions",
+    "title": "Extend your blog",
+    "section": "Subscriptions",
+    "text": "Subscriptions\nAdd a third party email service to manage and send emails to your blog subscribers.\n\nQuarto blog subscription documentation"
+  },
+  {
+    "objectID": "learn-more/more/index.html#extensions",
+    "href": "learn-more/more/index.html#extensions",
+    "title": "Extend your blog",
+    "section": "Extensions",
+    "text": "Extensions\nModify or extend the behavior of Quarto.\n\nQuarto extensions documentation"
+  },
+  {
+    "objectID": "learn-more/more/index.html#quarto-social-embeds",
+    "href": "learn-more/more/index.html#quarto-social-embeds",
+    "title": "Extend your blog",
+    "section": "Quarto social embeds",
+    "text": "Quarto social embeds\nFrom Mark Sellors, embed content from across the web into a quarto-rendered html document using a shortcode.\n\nSocial embeds documentation"
+  },
+  {
+    "objectID": "learn-more/more/index.html#change-your-landing-page",
+    "href": "learn-more/more/index.html#change-your-landing-page",
+    "title": "Extend your blog",
+    "section": "Change your landing page",
+    "text": "Change your landing page\nFrom Eric Ekholm, change your landing page to your About page.\n\nModifying the Default Quarto Blog Structure"
+  },
+  {
+    "objectID": "learn-more/migration/index.html",
+    "href": "learn-more/migration/index.html",
+    "title": "Migrate from R Markdown",
+    "section": "",
+    "text": "One important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in special comments at the top of code chunks rather than within the line that begins the chunk. For example:\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\nNote that if you prefer it is still possible to include chunk options on the first line (e.g. ```{r, echo = FALSE}). That said, we recommend using the comment-based syntax to make documents more portable and consistent across execution engines."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Building a blog with Quarto",
+    "section": "",
+    "text": "Presented by Isabella Velásquez"
+  },
+  {
+    "objectID": "workflow/create-new-post/index.html",
+    "href": "workflow/create-new-post/index.html",
+    "title": "Create a new post",
+    "section": "",
+    "text": "flowchart LR\n  A{Create a new folder under your listing folder} --> B(Create a new blog post with the title `index.qmd` in the folder)\n  A --> C(Optionally, create a `_metadata.yml` file that creates shared metadata for all documents in the folder)\n\n\n\n\n\nNew post workflow\n\n\n\nYou can create a new folder and index.qmd file manually or using the command line:\nmkdir posts/new-post\ntouch posts/new-post/index.qmd\n\nIn the default project created by RStudio, the listing folder is called /posts.\nThe folder name will be the “slug” (i.e., part of the URL that identifies the page)\n\n\n\n\n\n\n\n\nPost name & location\nSlug\n\n\n\n\n/posts/what-is-quarto/index.qmd\nwww.mysitename.com/posts/what-is-quarto\n\n\n/posts/what-is-quarto/post01.qmd\nwww.mysitename.com/posts/what-is-quarto/post01.html"
+  },
+  {
+    "objectID": "workflow/create-new-post/index.html#posts-folder",
+    "href": "workflow/create-new-post/index.html#posts-folder",
+    "title": "Create a new post",
+    "section": "/posts folder",
+    "text": "/posts folder\n\n_metadata.yml file\n# options specified here will apply to all posts in this folder\n\n# freeze computational output\n# (see https://quarto.org/docs/projects/code-execution.html#freeze)\nfreeze: true\n\n# Enable banner style title blocks\ntitle-block-banner: true\n\nfreeze\n\nfreeze: true: re-render during project render only when explicitly rerendered\nfreeze: auto: re-render only when source changes\n\ntitle-block-banner: creates a banner style title block.\n\nCan specify an image or a CSS color (e.g. \"#FFDDFF\" or red).\n\n\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the index.qmd file of your Quarto blog:\n\nChange the color of title-block-banner to “#FFA500.”\nVisit one of the posts to see the new color.\n\n\n\n\n\n/posts/index.qmd file\n---\ntitle: \"Welcome To My Blog\"\nauthor: \"Tristan O'Malley\"\ndate: \"2022-08-21\"\ncategories: [news]\n---\n\ntitle\nThe title of the post.\n\n\nauthor\nThe author of the post. You can have multiple:\nauthor:\n  - Haku\n  - Poki\n  - Pichi\n  - Nagi\n\n\ndate\nThe date of the post.\n\n\ncategories\nThe enabled categories. You can have multiple:\ncategories:\n  - tutorial\n  - how-to\nor in square braces: [tutorial, how-to]\n\n\nDrafts\nAdd draft: true to the document options to not include a post in the listing, site map, or site search. For example:\n---\ntitle: \"Welcome To My Blog\"\nauthor: \"Tristan O'Malley\"\ndate: \"2022-08-21\"\ncategories: [news]\ndraft: true\n---\n\nQuarto listing fields documentation \n\n\n\n\n\n\n\nTry it out!\n\n\n\n\nCreate a new post in a folder called my-first-post with the title index.qmd.\nCreate the YAML for the post: title, author, and date.\n\n\n\nBelow the YAML, you will write your post."
+  },
+  {
+    "objectID": "workflow/publish-blog/index.html",
+    "href": "workflow/publish-blog/index.html",
+    "title": "Publishing your blog",
+    "section": "",
+    "text": "Destination\nDescription\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements.\n\n\n\n\nGitHub Pages\nOne way of publishing to GitHub Pages is rendering the docs directory, check the rendered site into GitHub, and then configure your GitHub repo to publish from the docs directory.\n\n_quarto.yml\nAdd project configuration:\nproject:\n  type: website\n  output-dir: docs\nAdd a .nojekyll file:\ntouch .nojekyll"
+  },
+  {
+    "objectID": "workflow/write-docs/index.html",
+    "href": "workflow/write-docs/index.html",
+    "title": "Document authoring",
+    "section": "",
+    "text": "Quarto, like R Markdown, allows you to do literate programming.\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax."
+  },
+  {
+    "objectID": "workflow/write-docs/index.html#components-of-a-quarto-document",
+    "href": "workflow/write-docs/index.html#components-of-a-quarto-document",
+    "title": "Document authoring",
+    "section": "Components of a Quarto document",
+    "text": "Components of a Quarto document\n\n\n\n\nA Quarto document\n\n\n\n\n\n\n\n\nYAML\n\n\n\n\n\nText\n\n\n\n\n\nCode chunks\n\n\n\nFigure 1: ?(caption)"
+  },
+  {
+    "objectID": "workflow/write-docs/index.html#markdown-basics",
+    "href": "workflow/write-docs/index.html#markdown-basics",
+    "title": "Document authoring",
+    "section": "Markdown basics",
+    "text": "Markdown basics\nQuarto is based on Pandoc and uses its variation of markdown as its underlying document syntax:\n\n\nReminder that the visual editor mode in RStudio provides easy ways of authoring in Markdown.\n\nText Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics* and **bold**\nitalics and bold\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code\n\n\n\n\n\nHeadings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6\n\n\n\n\n\nLinks & Images\nImages can be saved in the folder of your post.\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n<https://quarto.org>\nhttps://quarto.org\n\n\n[Quarto](https://quarto.org)\nQuarto\n\n\n![My cat](kitty.jpg)                                     |\n\n\n\n\nYou can also create links between pages on your site:\n[about](about.qmd)\n[about](about.qmd#section)\n\n\nSource Code\nUse ``` to delimit blocks of source code:\n```\ncode\n```\nAdd syntax highlight code blocks by specifying a language:\n```python\n1 + 1\n```"
+  },
+  {
+    "objectID": "workflow/write-docs/index.html#divs-and-spans",
+    "href": "workflow/write-docs/index.html#divs-and-spans",
+    "title": "Document authoring",
+    "section": "Divs and spans",
+    "text": "Divs and spans\nYou can add classes, attributes, and other identifiers to regions of content using divs and spans:\n\nBorders\n::: {.border}\nThis content can be styled with a border\n:::\n\nThis content can be styled with a border\n\n\n\nCallout notes\n:::{.callout-note}\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important.\n\n\n\n\nTabsets\n::: {.panel-tabset}\n## Tab 1\n\nHello!\n\n## Tab 2\n\nHello again!\n:::\n\nTab 1Tab 2\n\n\nHello!\n\n\nHello again!\n\n\n\n\nQuarto authoring documentation"
+  },
+  {
+    "objectID": "workflow/write-docs/index.html#using-rpythonjuliaobservable",
+    "href": "workflow/write-docs/index.html#using-rpythonjuliaobservable",
+    "title": "Document authoring",
+    "section": "Using R/Python/Julia/Observable",
+    "text": "Using R/Python/Julia/Observable\nQuarto supports executable code blocks within markdown.\n\nNeed to have the appropriate engine installed\nQuarto can guess the engine or you can call it explicitly in the YAML\n\n\nQuarto computations documentation \n\n\nCode Blocks\nCode blocks that use braces around the language name (e.g. {r}) are executable, and will be run by Quarto during render.\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\"\n)\n\n\n\n\nFigure 2: Temperature and ozone level.\n\n\n\n\n\n\nExecution options\nYou can customize executed code with execution options. They can be specified globally:\n---\ntitle: \"My Document\"\nexecute:\n  echo: false\njupyter: python3\n---\nOr on a per-chunk basis:\n```{python}\n#| echo: true\n\nimport matplotlib.pyplot as plt\nplt.plot([1,2,3,4])\nplt.show()\n```\nNote the use of the hashpipe #| at the top of the chunk.\n\nQuarto execution options documentation"
+  },
+  {
+    "objectID": "workflow/write-docs/index.html#rendering-documents",
+    "href": "workflow/write-docs/index.html#rendering-documents",
+    "title": "Document authoring",
+    "section": "Rendering documents",
+    "text": "Rendering documents\nTo render, options include:\n\nUse the RStudio “Render” button or the “Build” tab\nUse the command line interface\n\nquarto render\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the /post/my-new-post/index.html file of your Quarto blog:\n\nAdd a heading 1\nWrite some text underneath, including a hyperlink.\nAdd a tabset.\nInclude this code chunk:\n\n```{r}\nmtcars |> with(plot(hp, mpg))\n```"
+  },
+  {
+    "objectID": "workflow.html",
+    "href": "workflow.html",
+    "title": "Workflow",
+    "section": "",
+    "text": "Add to your blog using this workflow.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nWhat goes below the YAML?\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nLet’s put your work online!\n\n\n\n\n \n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "learn-more.html",
+    "href": "learn-more.html",
+    "title": "Learn more",
+    "section": "",
+    "text": "If you decide to migrate from R Markdown, here are some tips.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThere is more functionality you can add to your blog! I’ve linked relevant pages here.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFind examples, tutorials, links, and more.\n\n\n\n\n \n\n\n\n\nNo matching items"
+  }
+]

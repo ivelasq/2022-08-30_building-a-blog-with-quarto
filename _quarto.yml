@@ -2,18 +2,31 @@ project:
   type: website
 
 website:
-  title: "2022-08-30_building-a-blog-with-quarto"
+  title: "Building a blog with Quarto"
+  output-dir: docs
   navbar:
+    pinned: true
+    left:
+      - text: "Introduction"
+        file: intro.qmd
+      - text: "Recap"
+        file: recap.qmd
+      - text: "Let's build a blog with Quarto"
+        file: lets-build-a-quarto-blog/index.qmd
+      - text: "Workflows"
+        file: workflow.qmd
+      - text: "Learn more"
+        file: learn-more.qmd
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/ivelasq/2022-08-30_building-a-blog-with-quarto
+    page-navigation: true
+
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [litera, styles.scss]
+    css: styles.scss
+    highlight-style: tango
 
-editor: visual
+editor: source
 

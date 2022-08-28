@@ -1,0 +1,14 @@
+---
+title: "Recap"
+listing:
+  id: recap-listings
+  contents: recap
+  sort: "title desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+page-navigation: true
+---

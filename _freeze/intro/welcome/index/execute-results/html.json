@@ -1,0 +1,11 @@
+{
+  "hash": "2ee634eac1136271a09e9236968a981b",
+  "result": {
+    "markdown": "---\ntitle: \"Agenda\"\ncode-fold: true\ntoc: true\ntoc_float: true\n---\n\n## Today's Agenda\n\n-   Why create a blog?\n-   Quarto recap\n-   How to create a website with Quarto\n-   How to create a blog with Quarto\n\n::: callout-warning\n## Some assumptions for today\n\n-   You know a bit of R and R Markdown\n-   You know about Quarto and just need a refresher\n:::\n\n## How to participate\n\n-   Clone the GitHub repository and follow along on your computer: \\[link\\]\n-   Work in the RStudio Cloud project: \\[link\\]\n-   Just listen in\n\n## Why create a blog?\n\nIt's time to share what you know!\n\n### Collaboration\n\n-   Share what you've learned\n-   Write about your opinions\n-   Give updates and news\n\n### Communication\n\n-   Practice writing\n-   Create a portfolio of work\n-   Centralization of information\n\n\n```{bash}\n#| collapse = TRUE\nquarto --help\n```\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
