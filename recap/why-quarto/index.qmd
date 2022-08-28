@@ -35,7 +35,7 @@ palmerpenguins::penguins %>%
 
 ## Do I need to use Quarto to create a blog?
 
-You can keep using blogdown, distill, etc. to create your blog.
+You can keep using blogdown, distill, etc., to create your blog.
 
 <center>
 ![](no-cat.gif){fig-alt="Cat shaking its head no, text says no underneath"}

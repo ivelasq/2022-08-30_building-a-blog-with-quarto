@@ -1,12 +1,9 @@
 ---
 title: "Migrate from R Markdown"
-code-fold: true
 toc: true
 description: "If you decide to migrate from R Markdown, here are some tips."
 image: thumbnail.png
 image-alt: "Drawing of a cat looking at a clock."
-filters:
-  - nutshell
 ---
 
 ## Moving over R Markdown files
@@ -61,13 +58,14 @@ knitr::convert_chunk_header("to-convert.Rmd", "converted.qmd")
 knitr::convert_chunk_header("to-convert.Rmd", "converted.Rmd") 
 ```
 
-:::{.column-page}
-::: {#fig-conversion layout-ncol=2}
+This will result in the following files:
 
-![Before converesion](convert-chunks/to-convert.png)
+::: {.column-screen-inset}
+::: {layout-ncol=2}
+
+![Before conversion](convert-chunks/to-convert.png)
+
 ![After conversion](convert-chunks/converted.png)
 
-Converting to new chunk options
 :::
 :::
-

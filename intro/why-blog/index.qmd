@@ -3,7 +3,7 @@ title: "Why a blog?"
 toc: false
 image: thumbnail.png
 image-alt: "A Tortoiseshell cat with a video game controller with question marks over her head."
-description: "Before we dive in to using Quarto, you may be wondering, why should I build a blog in the first place?"
+description: "Before we dive into using Quarto, you may be wondering, why should I build a blog in the first place?"
 filters:
    - lightbox      
    - nutshell

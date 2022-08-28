@@ -483,4 +483,4 @@ h1.title {
 And preview your blog.
 :::
 
-Now you have build a blog with Quarto! 🎉
+Now you have built a blog with Quarto! 🎉

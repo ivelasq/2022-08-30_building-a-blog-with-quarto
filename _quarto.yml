@@ -3,8 +3,6 @@ project:
 
 website:
   title: "rstd.io/build-quarto-blog"
-  output-dir: docs
-  
   navbar:
     pinned: true
     left:

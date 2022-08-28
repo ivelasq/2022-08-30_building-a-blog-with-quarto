@@ -3,41 +3,83 @@ title: "Additional resources"
 code-fold: true
 toc: true
 description: "There is more functionality you can add to your blog! I've linked relevant pages here."
-image: thumbnail.jpg
+image: thumbnail.png
 ---
 
-## RSS feed
+## Add functionality
+
+### RSS feeds
 
 Include an RSS feed to syndicate your content to feed readers and other websites.
 
 <h3 align="right"><a href="https://quarto.org/docs/websites/website-blog.html#rss-feed">Quarto blog RSS feed documentation</a> {{< fa arrow-right-long >}}</h3>
 
-## Subscriptions
+### Subscriptions
 
 Add a third party email service to manage and send emails to your blog subscribers.
 
 <h3 align="right"><a href="https://quarto.org/docs/websites/website-blog.html#subscriptions">Quarto blog subscription documentation</a> {{< fa arrow-right-long >}}</h3>
 
-## Extensions
+### Extensions
 
 Modify or extend the behavior of Quarto.
 
 <h3 align="right"><a href="https://quarto.org/docs/blog/posts/2022-07-25-feature-extensions/">Quarto extensions documentation</a> {{< fa arrow-right-long >}}</h3>
 
-## Quarto social embeds
+#### Quarto social embeds
 
 From Mark Sellors, embed content from across the web into a quarto-rendered html document using a shortcode.
 
 <h3 align="right"><a href="https://quarto-social-embeds.sellorm.com/">Social embeds documentation</a> {{< fa arrow-right-long >}}</h3>
 
-## Change your landing page
+### Change your landing page
 
 From Eric Ekholm, change your landing page to your About page.
 
 <h3 align="right"><a href="https://www.ericekholm.com/posts/demo-quarto-site/">Modifying the Default Quarto Blog Structure</a> {{< fa arrow-right-long >}}</h3>
 
-## Netlify redirects
+### Netlify redirects
 
 From Danielle Navarro, add redirects to change your blog post slugs.
 
 <h3 align="right"><a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects">Netlify redirects</a> {{< fa arrow-right-long >}}</h3>
+
+## GitHub Actions
+
+Automatically publish content from code checked in to a version control system.
+
+<h3 align="right"><a href="https://quarto.org/docs/publishing/ci.html">Publishing with Continuous Integration (CI)</a> {{< fa arrow-right-long >}}</h3>
+
+## Example Quarto blogs
+
+-   [%\>% dreams](https://ivelasq.rbind.io/) by Isabella Velásquez (my personal blog 😊)
+
+-   [Notes from a data witch](https://blog.djnavarro.net/) by Danielle Navarro
+
+-   [Notes from a spreadsheet](https://www.mrworthington.com/) by Matt Worthington
+
+-   [Once Upon a Time Series](https://lgibson7.quarto.pub/once-upon-a-time-series/) by Lydia Gibson
+
+-   [Shamsuddeen Hassan Muhammad](https://blogs.shmuhammad.com/)
+
+-   [Ted Laderas, PhD](https://laderast.github.io/)
+
+-   [The MockUp](https://themockup.blog/) by Tom Mock
+
+## Blog posts about building Quarto blogs
+
+-   [Creating a blog with Quarto in 10 steps](https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/) by Beatriz Milz
+
+-   [Creating your personal website using Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) by Sam Csik
+
+-   [Porting a distill blog to quarto](https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/) by Danielle Navarro
+
+-   [The ultimate guide to starting a Quarto blog](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html) by Albert Rapp
+
+## Other useful resources
+
+-   [A Quarto Tip a Day](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/) by Mine Çetinkaya-Rundel
+
+-   [\@Quarto_Pub Twitter account](https://twitter.com/quarto_pub?lang=en)
+
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto) by Mickaël Canouil 

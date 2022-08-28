@@ -8,7 +8,7 @@ image-alt: "A confused looking cat in front of a printing press"
 description: "Quarto is an open-source scientific and technical publishing system."
 ---
 
-If you haven't seen Tom Mock's webinar, Welcome to Quarto:
+Watch Tom Mock's webinar, Welcome to Quarto:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yvi5uXQMvu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -64,55 +64,20 @@ format:
 
 ### Client-side interactivity
 
-```{ojs}
-data = FileAttachment("palmer-penguins.csv").csv({ typed: true })
+-   [Shiny](https://quarto.org/docs/interactive/shiny/)
+-   [Observable JS](https://quarto.org/docs/interactive/ojs/)
+-   [Jupyter Widgets](https://quarto.org/docs/interactive/widgets/jupyter.html)
+-   [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
 
-viewof bill_length_min = Inputs.range(
-  [32, 50], 
-  {value: 35, step: 1, label: "Bill length (min):"}
-)
-viewof islands = Inputs.checkbox(
-  ["Torgersen", "Biscoe", "Dream"], 
-  { value: ["Torgersen", "Biscoe"], 
-    label: "Islands:"
-  }
-)
-
-filtered = data.filter(function(penguin) {
-  return bill_length_min < penguin.bill_length &&
-         islands.includes(penguin.island);
-})
-
-Plot.rectY(filtered, 
-  Plot.binX(
-    {y: "count"}, 
-    {x: "body_mass", fill: "species", thresholds: 20}
-  ))
-  .plot({
-    facet: {
-      data: filtered,
-      x: "sex",
-      y: "species",
-      marginRight: 80
-    },
-    marks: [
-      Plot.frame(),
-    ]
-  }
-)
+```{=html}
+<iframe width="800px" height="1000px" style="border:2px solid #dee2e6;" src="https://minecr.shinyapps.io/shiny_in_quarto/"></iframe>
 ```
 
 ## Different editors
 
-::: {.grid .step .column-page-right}
-
-::: {.g-col-lg-3 .g-col-12}
-
 ### Choose your tool<br/>and get started{.fw-light}
 
-:::
-
-::: {.tool .g-col-lg-9 .g-col-12}
+::: {layout-ncol=4}
 
 <a href="hello/vscode.html" role="button" class="btn btn-outline-light">
 ![](images/vscode-logo.png){width="77" fig-alt="VS Code logo."} VS Code
@@ -130,7 +95,6 @@ Plot.rectY(filtered,
 ![](images/text-editor-logo.png){width="77" fig-alt="Text Editor logo: circle with white outline and black fill inside of which is a command-line prompt."}Text Editor
 </a>
 
-:::
 :::
 
 ## Need help?

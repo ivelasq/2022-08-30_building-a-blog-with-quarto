@@ -1,0 +1,8 @@
+{
+  "listing": "/recap.html",
+  "items": [
+    "/recap/what-is-quarto/index.html",
+    "/recap/why-quarto/index.html",
+    "/recap/rstudio-and-quarto/index.html"
+  ]
+}
