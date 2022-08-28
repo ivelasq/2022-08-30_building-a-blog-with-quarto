@@ -26,8 +26,39 @@ Popular publishing services:
 
 [Quarto Pub](https://quartopub.com/) is a free publishing service for content created with Quarto. Quarto Pub is ideal for blogs, course or project websites, books, presentations, and personal hobby sites.
 
+* Publicly visible
+* Can be no larger than 100 MB
+* Have a softlimit of 10 GB of bandwidth per month
+
 ![Front page of QuartoPub website](quartopub.png)
 
-After creating an account, run `quarto publish` in the directory of your blog:
+After creating an account, run `quarto publish` in the directory of your blog. If you haven’t published to Quarto Pub before, the publish command will prompt you to authenticate:
 
+![Authentication step for Quarto Pub](/quartopub-steps/1-auth.png)
 
+Next, it will ask what provider you'd like:
+
+![Provider step for Quarto Pub](/quartopub-steps/2-provider.png)
+Then what account you'd like the site under:
+
+![Provider step for Quarto Pub](/quartopub-steps/3-account.png)
+
+Finally, the name of your site:
+
+![Provider step for Quarto Pub](/quartopub-steps/4-name.png)
+
+Now your blog is online! Here, you can edit the slug and delete the site.
+
+![Provider step for Quarto Pub](/quartopub-steps/5-site.png)
+
+#### `_publish.yml`
+
+The `_publish.yml` file is automatically created (or updated) whenever you execute the quarto publish command and is located within the project or document directory.
+
+:::{.callout-note}
+## Try it out!
+
+* Create a QuartoPub account.
+* Publish your blog to your account using `quarto publish`.
+
+:::
