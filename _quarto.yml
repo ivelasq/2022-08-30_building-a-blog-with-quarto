@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Building a blog with Quarto"
+  title: "rstd.io/build-quarto-blog"
   output-dir: docs
   
   navbar:

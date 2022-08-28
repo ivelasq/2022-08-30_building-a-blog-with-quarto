@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: a8873754-62a4-41d8-840b-addb95bc9942
+      url: 'https://quartopub.com/sites/ivelasq/building-a-blog-with-quarto'

@@ -175,46 +175,60 @@
     "text": "My name is Isabella Velásquez. Keep in touch!\n ivelasq3 |  ivelasq |  ivelasq |  ivelasq.rbind.io\n\n\n\n\n\n  \n\n\n\n\nAgenda\n\n\n\n\n\nThe agenda for today’s Meetup.\n\n\n\n\n\n\nAug 30, 2022\n\n\n\n\n\n\n  \n\n\n\n\nWhy a blog?\n\n\n\n\n\nBefore we dive in to using Quarto, you may be wondering, why should I build a blog in the first place?\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "learn-more/more/index.html",
-    "href": "learn-more/more/index.html",
-    "title": "Extend your blog",
+    "objectID": "learn-more/migrate-blog/index.html",
+    "href": "learn-more/migrate-blog/index.html",
+    "title": "Migrate from R Markdown",
+    "section": "",
+    "text": "Quarto is designed to be highly compatible with existing R Markdown documents\n\nYou should generally be able to use Quarto to render any existing .Rmd document without changes.\nChanging a .Rmd file to .qmd forces it into a Quarto document.\n\nIf you run into any errors, go into the file to see what occurred.\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the exercise blog:\n\nRender the .Rmd file in the rmarkdown-post folder."
+  },
+  {
+    "objectID": "learn-more/migrate-blog/index.html#code-chunk-options",
+    "href": "learn-more/migrate-blog/index.html#code-chunk-options",
+    "title": "Migrate from R Markdown",
+    "section": "Code chunk options",
+    "text": "Code chunk options\nOne important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in special comments at the top of code chunks rather than within the line that begins the chunk:\n\nCode chunk optionsUsing hashpipe\n\n\n```{r, echo = FALSE, fig-cap = \"Air Quality\"}\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n```{r}\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n\nIn the newest version of knitr (v1.40), use the function convert_chunk_header() to convert the old in-header chunk options to the new in-body chunk options.\n# convert to Quarto doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.qmd\")\n# convert to .Rmd doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.Rmd\") \n\n\n\n\n\n \n\n\nFigure 1: Converting to new chunk options"
+  },
+  {
+    "objectID": "learn-more/extend-blog/index.html",
+    "href": "learn-more/extend-blog/index.html",
+    "title": "Additional resources",
     "section": "",
     "text": "Include an RSS feed to syndicate your content to feed readers and other websites."
   },
   {
-    "objectID": "learn-more/more/index.html#subscriptions",
-    "href": "learn-more/more/index.html#subscriptions",
-    "title": "Extend your blog",
+    "objectID": "learn-more/extend-blog/index.html#subscriptions",
+    "href": "learn-more/extend-blog/index.html#subscriptions",
+    "title": "Additional resources",
     "section": "Subscriptions",
     "text": "Subscriptions\nAdd a third party email service to manage and send emails to your blog subscribers.\n\nQuarto blog subscription documentation"
   },
   {
-    "objectID": "learn-more/more/index.html#extensions",
-    "href": "learn-more/more/index.html#extensions",
-    "title": "Extend your blog",
+    "objectID": "learn-more/extend-blog/index.html#extensions",
+    "href": "learn-more/extend-blog/index.html#extensions",
+    "title": "Additional resources",
     "section": "Extensions",
     "text": "Extensions\nModify or extend the behavior of Quarto.\n\nQuarto extensions documentation"
   },
   {
-    "objectID": "learn-more/more/index.html#quarto-social-embeds",
-    "href": "learn-more/more/index.html#quarto-social-embeds",
-    "title": "Extend your blog",
+    "objectID": "learn-more/extend-blog/index.html#quarto-social-embeds",
+    "href": "learn-more/extend-blog/index.html#quarto-social-embeds",
+    "title": "Additional resources",
     "section": "Quarto social embeds",
     "text": "Quarto social embeds\nFrom Mark Sellors, embed content from across the web into a quarto-rendered html document using a shortcode.\n\nSocial embeds documentation"
   },
   {
-    "objectID": "learn-more/more/index.html#change-your-landing-page",
-    "href": "learn-more/more/index.html#change-your-landing-page",
-    "title": "Extend your blog",
+    "objectID": "learn-more/extend-blog/index.html#change-your-landing-page",
+    "href": "learn-more/extend-blog/index.html#change-your-landing-page",
+    "title": "Additional resources",
     "section": "Change your landing page",
     "text": "Change your landing page\nFrom Eric Ekholm, change your landing page to your About page.\n\nModifying the Default Quarto Blog Structure"
   },
   {
-    "objectID": "learn-more/migration/index.html",
-    "href": "learn-more/migration/index.html",
-    "title": "Migrate from R Markdown",
-    "section": "",
-    "text": "One important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in special comments at the top of code chunks rather than within the line that begins the chunk. For example:\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\nNote that if you prefer it is still possible to include chunk options on the first line (e.g. ```{r, echo = FALSE}). That said, we recommend using the comment-based syntax to make documents more portable and consistent across execution engines."
+    "objectID": "learn-more/extend-blog/index.html#netlify-redirects",
+    "href": "learn-more/extend-blog/index.html#netlify-redirects",
+    "title": "Additional resources",
+    "section": "Netlify redirects",
+    "text": "Netlify redirects\nFrom Danielle Navarro, add redirects to change your blog post slugs.\n\nNetlify redirects"
   },
   {
     "objectID": "index.html",
@@ -242,7 +256,7 @@
     "href": "workflow/publish-blog/index.html",
     "title": "Publishing your blog",
     "section": "",
-    "text": "Destination\nDescription\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements.\n\n\n\n\nQuarto Pub\nQuarto Pub is a free publishing service for content created with Quarto. Quarto Pub is ideal for blogs, course or project websites, books, presentations, and personal hobby sites.\n\n\n\nFront page of QuartoPub website\n\n\nAfter creating an account, run quarto publish in the directory of your blog:"
+    "text": "Destination\nDescription\n\n\n\n\nQuarto Pub\nPublishing service for Quarto documents, websites, and books. Use Quarto Pub when you want a free, easy to use service for publicly available content.\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements.\n\n\n\n\nQuarto Pub\nQuarto Pub is a free publishing service for content created with Quarto. Quarto Pub is ideal for blogs, course or project websites, books, presentations, and personal hobby sites.\n\nPublicly visible\nCan be no larger than 100 MB\nHave a softlimit of 10 GB of bandwidth per month\n\n\n\n\nFront page of QuartoPub website\n\n\nAfter creating an account, run quarto publish in the directory of your blog. If you haven’t published to Quarto Pub before, the publish command will prompt you to authenticate:\n\n\n\n\n\nNext, it will ask what provider you’d like:\n Then what account you’d like the site under:\n\n\n\n\n\nFinally, the name of your site:\n\n\n\n\n\nNow your blog is online! Here, you can edit the slug and delete the site.\n\n\n\n\n\n\n_publish.yml\nThe _publish.yml file is automatically created (or updated) whenever you execute the quarto publish command and is located within the project or document directory.\n- source: project\n  quarto-pub:\n    - id: # site ID here\n      url: # site URL here\n\n\n\n\n\n\nTry it out!\n\n\n\n\nCreate a QuartoPub account.\nPublish your blog to your account using quarto publish."
   },
   {
     "objectID": "workflow/write-docs/index.html",
@@ -298,6 +312,6 @@
     "href": "learn-more.html",
     "title": "Learn more",
     "section": "",
-    "text": "If you decide to migrate from R Markdown, here are some tips.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThere is more functionality you can add to your blog! I’ve linked relevant pages here.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFind examples, tutorials, links, and more.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "If you decide to migrate from R Markdown, here are some tips.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\nThere is more functionality you can add to your blog! I’ve linked relevant pages here.\n\n\n\n\n \n\n\n\n\nNo matching items"
   }
 ]

@@ -25,9 +25,8 @@
   {
     "listing": "/learn-more.html",
     "items": [
-      "/learn-more/migration/index.html",
-      "/learn-more/more/index.html",
-      "/learn-more/resources/index.html"
+      "/learn-more/migrate-blog/index.html",
+      "/learn-more/extend-blog/index.html"
     ]
   }
 ]

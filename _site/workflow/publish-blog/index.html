@@ -8,7 +8,7 @@
 
 <meta name="description" content="Let’s put your work online!">
 
-<title>Building a blog with Quarto - Publishing your blog</title>
+<title>rstd.io/build-quarto-blog - Publishing your blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -16,6 +16,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -68,7 +131,7 @@ ul.task-list{list-style: none;}
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Building a blog with Quarto</span>
+    <span class="navbar-title">rstd.io/build-quarto-blog</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -178,15 +241,68 @@ ul.task-list{list-style: none;}
 <section id="quarto-pub" class="level3">
 <h3 class="anchored" data-anchor-id="quarto-pub">Quarto Pub</h3>
 <p><a href="https://quartopub.com/">Quarto Pub</a> is a free publishing service for content created with Quarto. Quarto Pub is ideal for blogs, course or project websites, books, presentations, and personal hobby sites.</p>
+<ul>
+<li>Publicly visible</li>
+<li>Can be no larger than 100 MB</li>
+<li>Have a softlimit of 10 GB of bandwidth per month</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="quartopub.png" class="lightbox" title="Front page of QuartoPub website" data-gallery="quarto-lightbox-gallery-1"><img src="quartopub.png" class="img-fluid figure-img"></a></p>
+<p><a href="quartopub.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Front page of QuartoPub website"><img src="quartopub.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Front page of QuartoPub website</figcaption><p></p>
 </figure>
 </div>
-<p>After creating an account, run <code>quarto publish</code> in the directory of your blog:</p>
+<p>After creating an account, run <code>quarto publish</code> in the directory of your blog. If you haven’t published to Quarto Pub before, the publish command will prompt you to authenticate:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="quartopub-steps/1-auth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="quartopub-steps/1-auth.png" class="img-fluid figure-img" data-fig.alt="Authentication step for Quarto Pub"></a></p>
+</figure>
+</div>
+<p>Next, it will ask what provider you’d like:</p>
+<p><a href="quartopub-steps/2-provider.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="quartopub-steps/2-provider.png" class="img-fluid" data-fig.alt="Provider step for Quarto Pub"></a> Then what account you’d like the site under:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="quartopub-steps/3-account.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="quartopub-steps/3-account.png" class="img-fluid figure-img" data-fig.alt="Provider step for Quarto Pub"></a></p>
+</figure>
+</div>
+<p>Finally, the name of your site:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="quartopub-steps/4-name.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="quartopub-steps/4-name.png" class="img-fluid figure-img" data-fig.alt="Selecting a name step for Quarto Pub"></a></p>
+</figure>
+</div>
+<p>Now your blog is online! Here, you can edit the slug and delete the site.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="quartopub-steps/5-site.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="quartopub-steps/5-site.png" class="img-fluid figure-img" data-fig.alt="Rendered Quarto Pub site"></a></p>
+</figure>
+</div>
+<section id="publish.yml" class="level4">
+<h4 class="anchored" data-anchor-id="publish.yml"><code>_publish.yml</code></h4>
+<p>The <code>_publish.yml</code> file is automatically created (or updated) whenever you execute the quarto publish command and is located within the project or document directory.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">source</span><span class="kw">:</span><span class="at"> project</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">quarto-pub</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="co"> # site ID here</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">url</span><span class="kw">:</span><span class="co"> # site URL here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Try it out!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Create a QuartoPub account.</li>
+<li>Publish your blog to your account using <code>quarto publish</code>.</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -288,7 +404,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

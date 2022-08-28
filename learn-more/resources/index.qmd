@@ -1,5 +1,43 @@
 ---
 title: "Additional resources"
-description: "Find examples, tutorials, links, and more."
+code-fold: true
+toc: true
+description: "There is more functionality you can add to your blog! I've linked relevant pages here."
+image: thumbnail.jpg
 ---
 
+## RSS feed
+
+Include an RSS feed to syndicate your content to feed readers and other websites.
+
+<h3 align="right"><a href="https://quarto.org/docs/websites/website-blog.html#rss-feed">Quarto blog RSS feed documentation</a> {{< fa arrow-right-long >}}</h3>
+
+## Subscriptions
+
+Add a third party email service to manage and send emails to your blog subscribers.
+
+<h3 align="right"><a href="https://quarto.org/docs/websites/website-blog.html#subscriptions">Quarto blog subscription documentation</a> {{< fa arrow-right-long >}}</h3>
+
+## Extensions
+
+Modify or extend the behavior of Quarto.
+
+<h3 align="right"><a href="https://quarto.org/docs/blog/posts/2022-07-25-feature-extensions/">Quarto extensions documentation</a> {{< fa arrow-right-long >}}</h3>
+
+## Quarto social embeds
+
+From Mark Sellors, embed content from across the web into a quarto-rendered html document using a shortcode.
+
+<h3 align="right"><a href="https://quarto-social-embeds.sellorm.com/">Social embeds documentation</a> {{< fa arrow-right-long >}}</h3>
+
+## Change your landing page
+
+From Eric Ekholm, change your landing page to your About page.
+
+<h3 align="right"><a href="https://www.ericekholm.com/posts/demo-quarto-site/">Modifying the Default Quarto Blog Structure</a> {{< fa arrow-right-long >}}</h3>
+
+## Netlify redirects
+
+From Danielle Navarro, add redirects to change your blog post slugs.
+
+<h3 align="right"><a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#netlify-redirects">Netlify redirects</a> {{< fa arrow-right-long >}}</h3>

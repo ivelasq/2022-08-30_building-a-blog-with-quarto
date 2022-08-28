@@ -1,0 +1,73 @@
+---
+title: "Migrate from R Markdown"
+code-fold: true
+toc: true
+description: "If you decide to migrate from R Markdown, here are some tips."
+image: thumbnail.png
+image-alt: "Drawing of a cat looking at a clock."
+filters:
+  - nutshell
+---
+
+## Moving over R Markdown files
+
+Quarto is designed to be highly compatible with existing R Markdown documents
+
+* You should generally be able to use Quarto to render any existing `.Rmd` document without changes.
+* Changing a `.Rmd` file to `.qmd` forces it into a Quarto document.
+
+If you run into any errors, go into the file to see what occurred.
+
+:::{.callout-note}
+## Try it out!
+
+In the exercise blog:
+
+* Render the `.Rmd` file in the `rmarkdown-post` folder.
+:::
+
+## Code chunk options
+
+One important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in special comments at the top of code chunks rather than within the line that begins the chunk:
+
+:::{.panel-tabset}
+### Code chunk options
+````
+```{{r, echo = FALSE, fig-cap = "Air Quality"}}
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+        geom_point() + 
+        geom_smooth(method = "loess", se = FALSE)
+```
+````
+### Using hashpipe
+```{{r}}
+#| echo: false
+#| fig-cap: "Air Quality"
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+        geom_point() + 
+        geom_smooth(method = "loess", se = FALSE)
+```
+:::
+
+In the newest version of knitr (v1.40), use the function `convert_chunk_header()` to convert the old in-header chunk options to the new in-body chunk options.
+
+``` r
+# convert to Quarto doc with in-body chunk options
+knitr::convert_chunk_header("to-convert.Rmd", "converted.qmd")
+# convert to .Rmd doc with in-body chunk options
+knitr::convert_chunk_header("to-convert.Rmd", "converted.Rmd") 
+```
+
+:::{.column-page}
+::: {#fig-conversion layout-ncol=2}
+
+![Before converesion](convert-chunks/to-convert.png)
+![After conversion](convert-chunks/converted.png)
+
+Converting to new chunk options
+:::
+:::
+
