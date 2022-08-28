@@ -4,6 +4,7 @@ project:
 website:
   title: "Building a blog with Quarto"
   output-dir: docs
+  
   navbar:
     pinned: true
     left:
