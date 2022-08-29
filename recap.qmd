@@ -12,3 +12,6 @@ page-layout: full
 title-block-banner: false
 page-navigation: true
 ---
+
+::: {#recap-listings}
+:::

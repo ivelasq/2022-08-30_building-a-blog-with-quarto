@@ -33,11 +33,19 @@ alt-text: "Poster Calendar (1897) print in high resolution by Edward Penfield. O
 
 Want to try the exercises?
 
--   Clone the GitHub repository and follow along on your computer: rstd.io/quarto-blog-exercise-repo
--   Work in the RStudio Cloud project: rstd.io/quarto-blog-exercise-cloud
+* Clone the GitHub repository and follow along on your computer
+  * [{{< fa brands github size=1.4xl >}}](rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo
+* Work in the RStudio Cloud project
+  * [![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 ::: column-margin
 Today's recording will be available on YouTube!
+:::
+
+:::{.callout-note}
+## Try it out!
+
+You'll see the exercises in this callout box.
 :::
 
 <h3 align="right"><a href="https://quarto.org/">Check out the Quarto documentation!</a> {{< fa arrow-right-long >}}</h3>

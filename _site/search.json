@@ -88,7 +88,7 @@
     "href": "lets-build-a-quarto-blog/index.html",
     "title": "Let’s build a blog with Quarto",
     "section": "",
-    "text": "Websites share:\nBlogs are a specific type of website:"
+    "text": "Try it out!\n\n\n\nFollow along in the exercises:\n\n rstd.io/quarto-blog-exercise-repo\n rstd.io/quarto-blog-exercise-cloud\nWebsites share:\nBlogs are a specific type of website:"
   },
   {
     "objectID": "lets-build-a-quarto-blog/index.html#getting-started-with-a-new-quarto-blog",
@@ -165,7 +165,7 @@
     "href": "intro/agenda/index.html#how-to-participate",
     "title": "Agenda",
     "section": "How to participate",
-    "text": "How to participate\n\nWebsite: rstd.io/build-quarto-blog\n\nWant to try the exercises?\n\nClone the GitHub repository and follow along on your computer: rstd.io/quarto-blog-exercise-repo\nWork in the RStudio Cloud project: rstd.io/quarto-blog-exercise-cloud\n\n\n\nToday’s recording will be available on YouTube!\n\nCheck out the Quarto documentation!"
+    "text": "How to participate\n\nWebsite: rstd.io/build-quarto-blog\n\nWant to try the exercises?\n\nClone the GitHub repository and follow along on your computer\n\n rstd.io/quarto-blog-exercise-repo\n\nWork in the RStudio Cloud project\n\n rstd.io/quarto-blog-exercise-cloud\n\n\n\n\nToday’s recording will be available on YouTube!\n\n\n\n\n\n\nTry it out!\n\n\n\nYou’ll see the exercises in this callout box.\n\n\n\nCheck out the Quarto documentation!"
   },
   {
     "objectID": "intro.html",
@@ -221,7 +221,7 @@
     "href": "learn-more/migrate-blog/index.html#code-chunk-options",
     "title": "Migrate from R Markdown",
     "section": "Code chunk options",
-    "text": "Code chunk options\nOne important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in “hashpipes” at the top of code chunks rather than within the line that begins the chunk:\n\n\n\n```{r, echo = FALSE, fig-cap = \"Air Quality\"}\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n```{r}\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n\nIn the newest version of knitr (v1.40), use the function convert_chunk_header() to convert the old in-header chunk options to the new in-body chunk options.\n# convert to Quarto doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.qmd\")\n# convert to .Rmd doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.Rmd\") \nThis will result in the following files:\n\n\n\n\n\n\n\nBefore conversion\n\n\n\n\n\n\n\nAfter conversion"
+    "text": "Code chunk options\nOne important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in “hashpipes” at the top of code chunks rather than within the line that begins the chunk:\n\n\n\n```{r, echo = FALSE, fig-cap = \"Air Quality\"}\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n```{r}\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n\nIn the newest version of knitr (v1.40), use the function convert_chunk_header() to convert the old in-header chunk options to the new in-body chunk options.\n# convert to Quarto doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.qmd\")\n# convert to .Rmd doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.Rmd\") \nThis will result in the following files:\n\n\n\n\n\n\n\nBefore conversion\n\n\n\n\n\n\n\nAfter conversion\n\n\n\n\n\n\n\n\n\n\n\n\nTry it out!\n\n\n\nIn the exercise blog:\n\nConvert the .Rmd file in rmarkdown-post to .qmd, and move to a new post/my-new-qmd-post folder."
   },
   {
     "objectID": "index.html",

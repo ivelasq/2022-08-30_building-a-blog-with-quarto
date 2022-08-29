@@ -63,9 +63,17 @@ This will result in the following files:
 ::: {.column-screen-inset}
 ::: {layout-ncol=2}
 
-![Before conversion](convert-chunks/to-convert.png)
+![Before conversion](images/to-convert.png)
 
-![After conversion](convert-chunks/converted.png)
+![After conversion](images/converted.png)
 
 :::
+:::
+
+:::{.callout-note}
+## Try it out!
+
+In the exercise blog:
+
+* Convert the `.Rmd` file in `rmarkdown-post` to `.qmd`, and move to a new `post/my-new-qmd-post` folder.
 :::

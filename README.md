@@ -2,11 +2,10 @@
 
 RStudio Enterprise Community Meetup
 
-This is the repository for the Building a Blog With Quarto webinar materials.
+This is the repository for the "Building a blog with Quarto" materials.
 
-* Presentation URL: rstd.io/build-quarto-blog
-* Repository for the blog exercise:
-* RStudio Cloud project for the blog exercise:
-
+* Meetup website: rstd.io/build-quarto-blog
+* Exercise repository: rstd.io/quarto-blog-exercise-repo
+* RStudio Cloud project: (https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 
