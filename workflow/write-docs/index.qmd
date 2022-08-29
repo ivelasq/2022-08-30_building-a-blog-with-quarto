@@ -1,5 +1,5 @@
 ---
-title: "Document authoring"
+title: "Literate programming in Quarto"
 toc: true
 toc_float: true
 image: thumbnail.png
@@ -250,5 +250,7 @@ In the `/post/my-new-post/index.html` file of your Quarto blog:
 ```{{r}}
 mtcars |> with(plot(hp, mpg))
 ```
+
+Then, render the blog.
 :::
 

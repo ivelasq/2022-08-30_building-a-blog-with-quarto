@@ -1,6 +1,7 @@
 ---
 title: "Migrate from R Markdown"
 toc: true
+toc-location: left
 description: "If you decide to migrate from R Markdown, here are some tips."
 image: thumbnail.png
 image-alt: "Drawing of a cat looking at a clock."
@@ -25,10 +26,9 @@ In the exercise blog:
 
 ## Code chunk options
 
-One important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in special comments at the top of code chunks rather than within the line that begins the chunk:
+One important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in "hashpipes" at the top of code chunks rather than within the line that begins the chunk:
 
-:::{.panel-tabset}
-### Code chunk options
+::: {layout-ncol="2"}
 ````
 ```{{r, echo = FALSE, fig-cap = "Air Quality"}}
 library(ggplot2)
@@ -37,7 +37,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
         geom_smooth(method = "loess", se = FALSE)
 ```
 ````
-### Using hashpipe
+
 ```{{r}}
 #| echo: false
 #| fig-cap: "Air Quality"

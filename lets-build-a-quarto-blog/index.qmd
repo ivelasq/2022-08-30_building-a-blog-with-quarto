@@ -154,7 +154,7 @@ You can write custom listings in Embedded JavaScript templating (EJS).
 
 Tooting my own horn:
 
-[![Listing made with EJS on ivelasq.rbind.io](images/Screen%20Shot%202022-08-24%20at%2011.04.14%20PM.png)](https://ivelasq.rbind.io)
+[![Listing made with EJS on ivelasq.rbind.io](images/my-site.png)](https://ivelasq.rbind.io)
 
 #### `categories`
 
@@ -235,23 +235,23 @@ Five built-in templates:
 
 ## Jolla
 
-![Jolla](jolla.png){group="about"}
+![Jolla](images/about-jolla.png){group="about"}
 
 ## Trestles
 
-![Trestles](trestles.png){group="about"}
+![Trestles](images/about-trestles.png){group="about"}
 
 ## Solana
 
-![Solana](solana.png){group="about"}
+![Solana](images/about-solana.png){group="about"}
 
 ## Marquee
 
-![Marquee](marquee.png){group="about"}
+![Marquee](images/about-marquee.png){group="about"}
 
 ## Broadside
 
-![Broadside](broadside.png){group="about"}
+![Broadside](images/about-broadside.png){group="about"}
 
 :::
 

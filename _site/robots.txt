@@ -1,1 +1,0 @@
-Sitemap: https://quartopub.com/sites/ivelasq/building-a-blog-with-quarto/sitemap.xml

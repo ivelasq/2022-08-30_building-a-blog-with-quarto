@@ -11,15 +11,16 @@ lightbox: auto
 ---
 
 ## Types of websites
-:::{.column-margin}
+
+::: column-margin
 Thank you to the [Quarto Lightbox](https://github.com/quarto-ext/lightbox) extension!
 :::
 
-:::{.column-body-outset}
+::: column-body-outset
 ::: {#fig-sites layout-ncol="3"}
 ![RStudio Community Forum](site1.png){group="site-gallery"}
 
-![RStudio Solutions Documentation](site2.png){#fig-site}
+![RStudio Solutions Documentation](site2.png){group="site-gallery"}
 
 ![Julia Silge Blog](site3.png){group="site-gallery"}
 
@@ -55,6 +56,7 @@ Check out this [YouTube playlist](https://youtube.com/playlist?list=PLXKlQEvIRus
 :::
 
 ### A blog can help showcase...
+
 +---------------+-----------------------------------+
 | Collaboration | -   Share what you've learned     |
 |               |                                   |
@@ -69,8 +71,8 @@ Check out this [YouTube playlist](https://youtube.com/playlist?list=PLXKlQEvIRus
 |               | -   Centralization of information |
 +---------------+-----------------------------------+
 
-:::{.column-page}
-::: {#fig-sites layout-ncol="3"}
+::: column-page
+::: {layout-ncol="3"}
 [![Danielle Navarro](blog1.png)](https://blog.djnavarro.net/)
 
 [![Lydia Gibson](blog2.png)](https://lgibson7.quarto.pub/once-upon-a-time-series/)
@@ -81,58 +83,80 @@ Example Blogs
 :::
 :::
 
+### Blogs: Not just personal!
+
+-   External blogs for companies
+-   Internal blogs for teams
+
 ## What sorts of posts can you consider?
 
-* Standard lists
-* Profiles
-* How-to/tutorials
-* News posts
-* Problems-and-solutions
-* Case studies
-* Comparison posts
-* Stories
-* Open questions
-* Inspiration
-* Research
-* FAQ
-* Reviews
-* Interviews
-* Cheat sheets
-* Checklists
-* Infographics
-* Debates
-* Presentations
++----------------------------+-------------------+
+| -   Standard lists         | -   Research      |
+|                            |                   |
+| -   Profiles               | -   FAQ           |
+|                            |                   |
+| -   How-to/tutorials       | -   Reviews       |
+|                            |                   |
+| -   News posts             | -   Interviews    |
+|                            |                   |
+| -   Problems-and-solutions | -   Cheat sheets  |
+|                            |                   |
+| -   Case studies           | -   Checklists    |
+|                            |                   |
+| -   Comparison posts       | -   Infographics  |
+|                            |                   |
+| -   Stories                | -   Debates       |
+|                            |                   |
+| -   Open questions         | -   Presentations |
+|                            |                   |
+| -   Inspiration            |                   |
++----------------------------+-------------------+
 
 ## What to include?
 
 Blog posts are about finding a sweet spot in terms of length, media, and other formats and features that resonate with your audience.
 
 <center>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I made a listing page using <a href="https://twitter.com/hashtag/QuartoPub?src=hash&amp;ref_src=twsrc%5Etfw">#QuartoPub</a> to showcase my public slide decks! <a href="https://t.co/ZO144Os1rH">https://t.co/ZO144Os1rH</a><br><br>If you’re curious about the how, I included resources in PR 8 <a href="https://t.co/rMeUcCvK2b">https://t.co/rMeUcCvK2b</a><br><br>The magic is in the metadata.yml file that points to each deck <a href="https://t.co/zdOmi7P81f">https://t.co/zdOmi7P81f</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a></p>&mdash; Silvia Canelón (@spcanelon) <a href="https://twitter.com/spcanelon/status/1563299238871588870?ref_src=twsrc%5Etfw">August 26, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+I made a listing page using <a href="https://twitter.com/hashtag/QuartoPub?src=hash&amp;ref_src=twsrc%5Etfw">#QuartoPub</a> to showcase my public slide decks! <a href="https://t.co/ZO144Os1rH">https://t.co/ZO144Os1rH</a><br><br>If you're curious about the how, I included resources in PR 8 <a href="https://t.co/rMeUcCvK2b">https://t.co/rMeUcCvK2b</a><br><br>The magic is in the metadata.yml file that points to each deck <a href="https://t.co/zdOmi7P81f">https://t.co/zdOmi7P81f</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a>
+
+</p>
+
+--- Silvia Canelón (@spcanelon) <a href="https://twitter.com/spcanelon/status/1563299238871588870?ref_src=twsrc%5Etfw">August 26, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
 </center>
 
 ## What to consider?
 
 Important to consider when creating a blog:
 
-* Goals and purpose
-* Values
-* Valuable and relevant content
-* Workflows and maintenance
-* Technical stuff, too!
+-   Goals and purpose
+-   Values
+-   Valuable and relevant content
+-   Workflows and maintenance
+-   Technical stuff, too!
 
 [:Note for internal blogs](#x-invisible)
 
-:::{.column-margin}
+::: column-margin
 Thank you to the [Quarto Nutshell](https://github.com/schochastics/quarto-nutshell) extension by David Schoch!
 :::
 
-## :x invisible
+## :x invisible {#x-invisible}
 
 We're not going to be going too in depth on internal blogs at organizations today, but there are other things to note for those types of blogs.
 
-* Buy-in and ownership
-* Guardrails
-* Norms and feedback
+-   Buy-in and ownership
+-   Guardrails
+-   Norms and feedback
 
 Watch my previous talk, [Building a blog with R](https://www.youtube.com/watch?v=MrW5XFf7aps), to hear me go into detail about these considerations.
