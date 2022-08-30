@@ -102,6 +102,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -184,8 +187,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-a-new-post" id="toc-creating-a-new-post" class="nav-link active" data-scroll-target="#creating-a-new-post">Creating a new post</a></li>
-  <li><a href="#posts-folder" id="toc-posts-folder" class="nav-link" data-scroll-target="#posts-folder"><code>/posts</code> folder</a>
+  <li><a href="#posts-folder" id="toc-posts-folder" class="nav-link active" data-scroll-target="#posts-folder"><code>/posts</code> folder</a></li>
+  <li><a href="#creating-a-new-post" id="toc-creating-a-new-post" class="nav-link" data-scroll-target="#creating-a-new-post">Creating a new post</a></li>
+  <li><a href="#posts-folder-1" id="toc-posts-folder-1" class="nav-link" data-scroll-target="#posts-folder-1"><code>/posts</code> folder</a>
   <ul class="collapse">
   <li><a href="#metadata.yml-file" id="toc-metadata.yml-file" class="nav-link" data-scroll-target="#metadata.yml-file"><code>_metadata.yml</code> file</a></li>
   <li><a href="#postsindex.qmd-file" id="toc-postsindex.qmd-file" class="nav-link" data-scroll-target="#postsindex.qmd-file"><code>/posts/index.qmd</code> file</a></li>
@@ -194,7 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -217,6 +221,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
+<section id="posts-folder" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="posts-folder"><code>/posts</code> folder</h2>
+<div class="column-body-outset">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/posts-folder.png" class="lightbox" title="Posts folder in the blog directory" data-gallery="posts"><img src="images/posts-folder.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Posts folder in the blog directory</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/posts.png" class="lightbox" title="Folders inside the posts folder" data-gallery="posts"><img src="images/posts.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Folders inside the posts folder</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/posts-documents.png" class="lightbox" title="QMD files inside of the individual posts folders" data-gallery="posts"><img src="images/posts-documents.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">QMD files inside of the individual posts folders</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="creating-a-new-post" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-new-post">Creating a new post</h2>
 <div class="cell" data-fig-width="8">
@@ -267,18 +298,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </thead>
 <tbody>
 <tr class="odd">
-<td>/posts/what-is-quarto/index.qmd</td>
+<td><code>/posts/what-is-quarto/index.qmd</code></td>
 <td>www.mysitename.com/posts/what-is-quarto</td>
 </tr>
 <tr class="even">
-<td>/posts/what-is-quarto/post01.qmd</td>
+<td><code>/posts/what-is-quarto/post01.qmd</code></td>
 <td>www.mysitename.com/posts/what-is-quarto/post01.html</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="posts-folder" class="level2">
-<h2 class="anchored" data-anchor-id="posts-folder"><code>/posts</code> folder</h2>
+<section id="posts-folder-1" class="level2">
+<h2 class="anchored" data-anchor-id="posts-folder-1"><code>/posts</code> folder</h2>
 <section id="metadata.yml-file" class="level3">
 <h3 class="anchored" data-anchor-id="metadata.yml-file"><code>_metadata.yml</code> file</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># options specified here will apply to all posts in this folder</span></span>
@@ -292,8 +323,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><code>freeze</code>
 <ul>
-<li><code>freeze: true</code>: re-render during project render only when explicitly rerendered</li>
-<li><code>freeze: auto</code>: re-render only when source changes</li>
+<li><code>freeze: true</code>: Re-render during project render only when explicitly re-rendered.</li>
+<li><code>freeze: auto</code>: Re-render only when source changes.</li>
 </ul></li>
 <li><code>title-block-banner</code>: creates a banner style title block.
 <ul>
@@ -332,12 +363,25 @@ Try it out!
 </section>
 <section id="author" class="level4">
 <h4 class="anchored" data-anchor-id="author"><code>author</code></h4>
-<p>The author of the post. You can have multiple:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Haku</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Poki</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Pichi</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Nagi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The author of the post.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Single</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Multiple v1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Multiple v2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> Haku</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Haku</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Poki</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Pichi</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Nagi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">Haku</span><span class="kw">,</span><span class="at"> Poki</span><span class="kw">,</span><span class="at"> Pichi</span><span class="kw">,</span><span class="at"> Nagi</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="date" class="level4">
 <h4 class="anchored" data-anchor-id="date"><code>date</code></h4>
@@ -346,21 +390,33 @@ Try it out!
 <section id="categories" class="level4">
 <h4 class="anchored" data-anchor-id="categories"><code>categories</code></h4>
 <p>The enabled categories. You can have multiple:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> tutorial</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> how-to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>or in square braces: <code>[tutorial, how-to]</code></p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Single</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Multiple v1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Multiple v2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> how-to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> tutorial</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> how-to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">tutorial</span><span class="kw">,</span><span class="at"> how-to</span><span class="kw">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="drafts" class="level4">
 <h4 class="anchored">Drafts</h4>
 <p>Add <code>draft: true</code> to the document options to not include a post in the listing, site map, or site search. For example:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Welcome To My Blog"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tristan O'Malley"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2022-08-21"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">news</span><span class="kw">]</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">draft</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Welcome To My Blog"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tristan O'Malley"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2022-08-21"</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">news</span><span class="kw">]</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">draft</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 align="right" class="anchored" data-anchor-id="drafts">
 <a href="https://quarto.org/docs/websites/website-listings.html#listing-fields">Quarto listing fields documentation</a> <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 </h3>
@@ -374,10 +430,12 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <ul>
 <li>Create a new post in a folder called <code>my-first-post</code> with the title <code>index.qmd</code>.</li>
 <li>Create the YAML for the post: <code>title</code>, <code>author</code>, and <code>date</code>.</li>
 </ul>
+<p>Preview/render the website and check out the listing page.</p>
 </div>
 </div>
 <p>Below the YAML, you will write your post.</p>
@@ -487,6 +545,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 

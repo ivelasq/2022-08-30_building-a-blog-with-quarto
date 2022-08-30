@@ -17,18 +17,18 @@ Quarto, like R Markdown, allows you to do literate programming.
 
 Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax.
 
-## Components of a Quarto document
+## Autonomy of a Quarto document
 
 <!-- Thanks to the lightbox extension for the below! https://github.com/quarto-ext/lightbox -->
 
-![A Quarto document](doc.png)
+![A Quarto document](images/doc.png)
 
-::: {#fig-doc-components layout-ncol="3"}
-![YAML](yaml.png){group="my-gallery"}
+::: {layout-ncol="3"}
+![YAML](images/yaml.png){group="my-gallery"}
 
-![Text](text.png){group="my-gallery"}
+![Text](images/text.png){group="my-gallery"}
 
-![Code chunks](code.png){group="my-gallery"}
+![Code chunks](images/code.png){group="my-gallery"}
 :::
 
 ## Markdown basics
@@ -36,7 +36,7 @@ Quarto is based on Pandoc and uses its variation of markdown as its underlying d
 Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax:
 
 ::: column-margin
-Reminder that the visual editor mode in RStudio provides easy ways of authoring in Markdown.
+Reminder that the visual editor mode in RStudio provides features for authoring in Markdown.
 :::
 
 ### Text Formatting
@@ -108,7 +108,7 @@ Add syntax highlight code blocks by specifying a language:
 ```
 ````
 
-## Divs and spans
+## Fenced divs
 
 You can add classes, attributes, and other identifiers to regions of content using divs and spans:
 
@@ -171,14 +171,39 @@ Hello again!
 
 Quarto supports executable code blocks within markdown.
 
--   Need to have the appropriate engine installed
--   Quarto can guess the engine or you can call it explicitly in the YAML
+```{{r}}
+mtcars |> with(plot(hp, mpg))
+```
 
-<h3 align="right">
+### Calling engines
 
-<a href="https://quarto.org/docs/computations/python.html">Quarto computations documentation</a> {{< fa arrow-right-long >}}
+-   Need to have the appropriate engine installed.
+-   Quarto can guess the engine or you can call it explicitly in the YAML.
 
-</h3>
+::: {layout-ncol="2"}
+``` markdown
+---
+title: "matplotlib demo"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+```
+
+``` markdown
+---
+title: "ggplot2 demo"
+author: "Norah Jones"
+date: "5/22/2021"
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+```
+:::
 
 ### Code Blocks
 
@@ -239,6 +264,8 @@ quarto render
 
 :::{.callout-note}
 ## Try it out!
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 In the `/post/my-new-post/index.html` file of your Quarto blog:
 

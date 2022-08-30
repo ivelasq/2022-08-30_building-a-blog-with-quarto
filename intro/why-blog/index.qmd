@@ -18,11 +18,11 @@ Thank you to the [Quarto Lightbox](https://github.com/quarto-ext/lightbox) exten
 
 ::: column-body-outset
 ::: {#fig-sites layout-ncol="3"}
-![RStudio Community Forum](site1.png){group="site-gallery"}
+![RStudio Community Forum](images/site1.png){group="site-gallery"}
 
-![RStudio Solutions Documentation](site2.png){group="site-gallery"}
+![RStudio Solutions Documentation](images/site2.png){group="site-gallery"}
 
-![Julia Silge Blog](site3.png){group="site-gallery"}
+![Julia Silge Blog](images/site3.png){group="site-gallery"}
 
 Example Websites
 :::
@@ -73,11 +73,11 @@ Check out this [YouTube playlist](https://youtube.com/playlist?list=PLXKlQEvIRus
 
 ::: column-page
 ::: {layout-ncol="3"}
-[![Danielle Navarro](blog1.png)](https://blog.djnavarro.net/)
+[![Danielle Navarro](images/blog1.png)](https://blog.djnavarro.net/)
 
-[![Lydia Gibson](blog2.png)](https://lgibson7.quarto.pub/once-upon-a-time-series/)
+[![Lydia Gibson](images/blog2.png)](https://lgibson7.quarto.pub/once-upon-a-time-series/)
 
-[![Shamsuddeen Hassan Muhammad](blog3.png)](https://blogs.shmuhammad.com/)
+[![Shamsuddeen Hassan Muhammad](images/blog3.png)](https://blogs.shmuhammad.com/)
 
 Example Blogs
 :::

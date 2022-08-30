@@ -208,9 +208,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about"><code>about</code></a></li>
   <li><a href="#template" id="toc-template" class="nav-link" data-scroll-target="#template"><code>template</code></a></li>
   <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links"><code>links</code></a></li>
-  <li><a href="#href" id="toc-href" class="nav-link" data-scroll-target="#href"><code>href</code></a></li>
+  <li><a href="#icon" id="toc-icon" class="nav-link" data-scroll-target="#icon"><code>- icon</code></a></li>
   <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text"><code>text</code></a></li>
-  <li><a href="#icon" id="toc-icon" class="nav-link" data-scroll-target="#icon"><code>icon</code></a></li>
+  <li><a href="#href" id="toc-href" class="nav-link" data-scroll-target="#href"><code>href</code></a></li>
   </ul></li>
   <li><a href="#quarto.yml-quarto-project-file" id="toc-quarto.yml-quarto-project-file" class="nav-link" data-scroll-target="#quarto.yml-quarto-project-file">_quarto.yml: Quarto project file</a>
   <ul>
@@ -339,16 +339,17 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <ul>
-<li>Create a new blog using the RStudio wizard and preview the site</li>
-<li>Or, open the RStudio Cloud project and preview the site</li>
+<li>Create a new blog using the RStudio wizard and preview the site.</li>
+<li>Or, open the RStudio Cloud project and preview the site.</li>
 </ul>
 </div>
 </div>
 </section>
 <section id="quarto-blog-files" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="quarto-blog-files">Quarto blog files</h2>
-<p>When you create a new blog, you will see files automatically populated in your directory:</p>
+<p>When you create a new blog, these files will be automatically populated in your directory:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Creating</span> project at myblog:</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created _quarto.yml</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-</span> Created index.qmd</span>
@@ -393,7 +394,7 @@ Try it out!
 </table>
 <section id="index.qmd-blog-home-page" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="index.qmd-blog-home-page">index.qmd: Blog home page</h3>
-<p><code>index.qmd</code> will be the landing page for your site.</p>
+<p>The <code>index.qmd</code> file in your home directory will be the landing page for your site.</p>
 <ul>
 <li>When creating a new blog, it will default to the listing page for the documents in the <code>posts</code> directory.</li>
 <li>If you prefer that the About page is your landing page, you can rename your <code>index.qmd</code> to <code>posts.qmd</code> and <code>about.qmd</code> to <code>index.qmd</code>.</li>
@@ -422,10 +423,32 @@ Try it out!
 <section id="contents" class="level4">
 <h4 class="anchored" data-anchor-id="contents"><code>contents</code></h4>
 <p><code>contents</code> control what documents are included in the listing by specifying a set of input files.</p>
+<ul>
+<li><code>contents: posts</code> contains documents from the <code>posts/</code> folder.</li>
+</ul>
 </section>
 <section id="sort" class="level4">
 <h4 class="anchored" data-anchor-id="sort"><code>sort</code></h4>
 <p><code>sort</code> controls the order of the listing.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Sort by date descending</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Sort by date ascending</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Sort by title ascending</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Sort by date and title</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  sort: "date desc"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  sort: "date asc"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>  sort: "title asc"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  sort:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>date desc</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>title desc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="type" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="type"><code>type</code></h4>
@@ -436,20 +459,20 @@ Try it out!
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="grid.png" class="lightbox" data-gallery="listing" title="Grid"><img src="grid.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Grid</figcaption><p></p>
+<p><a href="images/grid.png" class="lightbox" title="type: grid" data-gallery="listing"><img src="images/grid.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>type: grid</code></figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="table.png" class="lightbox" data-gallery="listing" title="Table"><img src="table.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Table</figcaption><p></p>
+<p><a href="images/table.png" class="lightbox" title="type: table" data-gallery="listing"><img src="images/table.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>type: table</code></figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="default.png" class="lightbox" data-gallery="listing" title="Default"><img src="default.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Default</figcaption><p></p>
+<p><a href="images/default.png" class="lightbox" title="type: default" data-gallery="listing"><img src="images/default.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>type: default</code></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -467,14 +490,88 @@ Try it out!
 <section id="categories" class="level4">
 <h4 class="anchored" data-anchor-id="categories"><code>categories</code></h4>
 <p><code>categories</code> display the categories for your posts. The categories are read from the YAML of the documents included in the listing.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">true</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><code>categories: true</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/categories.png" class="lightbox" title="Categories list on the right-hand side of a listing" data-gallery="quarto-lightbox-gallery-4"><img src="images/categories.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Categories list on the right-hand side of a listing</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">numbered</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">unnumbered</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">cloud</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><code>categories: numbered</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/categories-numbered.png" class="lightbox" title="Categories list on the right-hand side of a listing with numbers on the side denoting the count" data-gallery="quarto-lightbox-gallery-5"><img src="images/categories-numbered.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Categories list on the right-hand side of a listing with numbers on the side denoting the count</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><code>categories: unnumbered</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/categories-unnumbered.png" class="lightbox" title="Categories list on the right-hand side of a listing without numbers" data-gallery="quarto-lightbox-gallery-6"><img src="images/categories-unnumbered.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Categories list on the right-hand side of a listing without numbers</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><code>categories: cloud</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/categories-cloud.png" class="lightbox" title="Categories list on the right-hand side of a listing with each category in a size corresponding to how many posts are using that category" data-gallery="quarto-lightbox-gallery-7"><img src="images/categories-cloud.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Categories list on the right-hand side of a listing with each category in a size corresponding to how many posts are using that category</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="sort-ui" class="level4">
 <h4 class="anchored" data-anchor-id="sort-ui"><code>sort-ui</code></h4>
 <p><code>sort-ui</code> provides a sorting box for readers.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">true</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><code>sort-ui: true</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/sort-ui.png" class="lightbox" title="UI for sorting blog posts on the left-hand side of a listing page" data-gallery="quarto-lightbox-gallery-8"><img src="images/sort-ui.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">UI for sorting blog posts on the left-hand side of a listing page</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="filter-ui" class="level4">
 <h4 class="anchored" data-anchor-id="filter-ui"><code>filter-ui</code></h4>
 <p><code>filter-ui</code> provides a filtering box for readers.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">true</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><code>filter-ui: true</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/filter-ui.png" class="lightbox" title="UI for filtering blog posts on the right-hand side of a listing page" data-gallery="quarto-lightbox-gallery-9"><img src="images/filter-ui.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">UI for filtering blog posts on the right-hand side of a listing page</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="page-layout" class="level4">
 <h4 class="anchored" data-anchor-id="page-layout"><code>page-layout</code></h4>
@@ -493,6 +590,7 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>index.qmd</code> file of your Quarto blog:</p>
 <ul>
 <li>Change the title of your listing page.</li>
@@ -507,23 +605,23 @@ Try it out!
 <section id="about.qmd-blog-about-page" class="level3">
 <h3 class="anchored" data-anchor-id="about.qmd-blog-about-page">about.qmd: Blog about page</h3>
 <p>The <code>about.qmd</code> document includes additional information on the blog and its author.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> profile.jpg</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> jolla</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">links</span><span class="kw">:</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Twitter</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> linkedin</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> LinkedIn</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://linkedin.com</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"About"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span><span class="kw">:</span><span class="at"> profile.jpg</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">about</span><span class="kw">:</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">template</span><span class="kw">:</span><span class="at"> jolla</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">links</span><span class="kw">:</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Twitter</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> linkedin</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> LinkedIn</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://linkedin.com</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Github</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s go through each line:</p>
 <section id="title-1" class="level4">
 <h4 class="anchored" data-anchor-id="title-1"><code>title</code></h4>
@@ -542,45 +640,45 @@ Try it out!
 <p><code>template</code> controls how the About page looks.</p>
 <p>Five built-in templates:</p>
 <div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Jolla</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Trestles</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Solana</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Marquee</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Broadside</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Jolla</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Trestles</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Solana</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false">Marquee</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-5" role="tab" aria-controls="tabset-6-5" aria-selected="false">Broadside</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/about-jolla.png" class="lightbox" data-gallery="about" title="Jolla"><img src="images/about-jolla.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Jolla</figcaption><p></p>
+<p><a href="images/about-jolla.png" class="lightbox" title="template: jolla" data-gallery="about"><img src="images/about-jolla.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>template: jolla</code></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/about-trestles.png" class="lightbox" data-gallery="about" title="Trestles"><img src="images/about-trestles.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Trestles</figcaption><p></p>
+<p><a href="images/about-trestles.png" class="lightbox" title="template: trestles" data-gallery="about"><img src="images/about-trestles.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>template: trestles</code></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/about-solana.png" class="lightbox" data-gallery="about" title="Solana"><img src="images/about-solana.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Solana</figcaption><p></p>
+<p><a href="images/about-solana.png" class="lightbox" title="template: solana" data-gallery="about"><img src="images/about-solana.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>template: solana</code></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/about-marquee.png" class="lightbox" data-gallery="about" title="Marquee"><img src="images/about-marquee.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Marquee</figcaption><p></p>
+<p><a href="images/about-marquee.png" class="lightbox" title="template: marquee" data-gallery="about"><img src="images/about-marquee.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>template: marquee</code></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="tabset-6-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-5-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/about-broadside.png" class="lightbox" data-gallery="about" title="Broadside"><img src="images/about-broadside.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Broadside</figcaption><p></p>
+<p><a href="images/about-broadside.png" class="lightbox" title="template: broadside" data-gallery="about"><img src="images/about-broadside.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption"><code>template: broadside</code></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -591,17 +689,17 @@ Try it out!
 <h4 class="anchored" data-anchor-id="links"><code>links</code></h4>
 <p>A set of links to other resources.</p>
 </section>
-<section id="href" class="level4">
-<h4 class="anchored" data-anchor-id="href"><code>href</code></h4>
-<p>Link to file contained with the project or an external URL.</p>
+<section id="icon" class="level4">
+<h4 class="anchored" data-anchor-id="icon"><code>- icon</code></h4>
+<p>One of the standard Bootstrap 5 icons.</p>
 </section>
 <section id="text" class="level4">
 <h4 class="anchored" data-anchor-id="text"><code>text</code></h4>
-<p>Text to display for navigation item</p>
+<p>Text to display for navigation item.</p>
 </section>
-<section id="icon" class="level4">
-<h4 class="anchored" data-anchor-id="icon"><code>icon</code></h4>
-<p>One of the standard Bootstrap 5 icons</p>
+<section id="href" class="level4">
+<h4 class="anchored" data-anchor-id="href"><code>href</code></h4>
+<p>Link to file contained with the project or an external URL.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -612,6 +710,7 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>about.qmd</code> file of your Quarto blog:</p>
 <ul>
 <li>Change the title of the page.</li>
@@ -625,27 +724,24 @@ Try it out!
 <section id="quarto.yml-quarto-project-file" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="quarto.yml-quarto-project-file">_quarto.yml: Quarto project file</h3>
 <p>The <code>_quarto.yml</code> file is the configuration file for your website.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>The Quarto documentation lists the <a href="https://quarto.org/docs/websites/website-navigation.html#top-navigation">possible top navigation options</a>.</p>
-</div></div><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"my-new-blog"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"my-new-blog"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://github.com/</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> https://twitter.com</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Let’s go through each line:</p>
 <section id="project" class="level4">
 <h4 class="anchored" data-anchor-id="project"><code>project</code></h4>
@@ -674,9 +770,9 @@ Try it out!
 <section id="href-1" class="level4">
 <h4 class="anchored"><code>href</code></h4>
 <p>The link associated with the icon.</p>
-<p>There are other options available for the top level navigation. For example, if we want to change the background to an orange, we could add:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> </span><span class="st">"#C45508"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are other options available for the top level navigation. For example, if we want to change the background to orange, we could add:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">background</span><span class="kw">:</span><span class="at"> </span><span class="st">"#C45508"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout-important callout callout-style-simple">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -688,9 +784,9 @@ Try it out!
 </div>
 </div>
 <p>There are also other options for the individual navigation items. For example, if we want to add text to the right side:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"my name here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="st">"my name here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 align="right" class="anchored" data-anchor-id="href-1">
 <a href="https://quarto.org/docs/websites/website-navigation.html#top-navigation">Quarto top navigation documentation</a> <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
 </h3>
@@ -704,11 +800,12 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>_quarto.yml</code> file of your Quarto blog:</p>
 <ul>
 <li>Change the background to a different color.</li>
 <li>Add another hyperlink in the navigation bar.</li>
-<li>Add your name to the <strong>left</strong> side of the navigation bar.</li>
+<li>Add your name to the <strong>left</strong> side of the top navigation bar.</li>
 </ul>
 </div>
 </div>
@@ -747,34 +844,55 @@ Try it out!
 <li>yeti</li>
 <li>zephyr</li>
 </ul>
-</div></div><div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="sourceCode" id="cb14"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Blogs can use any of the 25 Bootswatch themes included with Quarto, or you can create your own theme.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">cosmo</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">darkly</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">sketchy</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    theme: cosmo</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    css: styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    theme: darkly</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    css: styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    theme: sketchy</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    css: styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="dark-themes" class="level4">
 <h4 class="anchored" data-anchor-id="dark-themes">Dark themes</h4>
 <p>Quarto websites also support light and dark themes. A toggle will allow your reader to select the desired appearance.</p>
 <p>Specify under <code>theme</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="syntax-highlighting" class="level4">
 <h4 class="anchored" data-anchor-id="syntax-highlighting">Syntax highlighting</h4>
 <p>You can also change the syntax highlighting for your code blocks. Run the below to see all the options:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> pandoc <span class="at">--list-highlight-languages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> pandoc <span class="at">--list-highlight-languages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Specify the syntax highlighting style by specifying <code>highlight-style</code> under theme:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">light</span><span class="kw">:</span><span class="at"> litera</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">dark</span><span class="kw">:</span><span class="at"> darkly</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.scss</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">highlight-style</span><span class="kw">:</span><span class="at"> tango</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.scss</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">highlight-style</span><span class="kw">:</span><span class="at"> eiffel</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -785,11 +903,12 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>_quarto.yml</code> file of your Quarto blog:</p>
 <ul>
 <li>Change to another Bootswatch theme.</li>
 <li>Add a dark theme with another Bootswatch theme.</li>
-<li>Change the syntax highlighting to <code>a11y.</code></li>
+<li>Change the syntax highlighting to <code>eiffel</code>.</li>
 </ul>
 </div>
 </div>
@@ -810,20 +929,21 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>styles.css</code> file of your Quarto blog:</p>
 <ul>
 <li>Add:</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>@import url('https://fonts.googleapis.com/css2?family=Pacifico<span class="er">&amp;</span>family=Pacifico<span class="er">&amp;</span>display=swap');</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>h1.title {</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  font-family: "Pacifico";</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  font-size: 30px;</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>@import url('https://fonts.googleapis.com/css2?family=Pacifico<span class="er">&amp;</span>family=Pacifico<span class="er">&amp;</span>display=swap');</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>h1.title {</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  font-family: "Pacifico";</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  font-size: 30px;</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>And preview your blog.</p>
 </div>
 </div>
-<p>Now you have built a blog with Quarto! 🎉</p>
+<p>You have built a blog with Quarto! 🎉</p>
 
 
 </section>
@@ -930,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

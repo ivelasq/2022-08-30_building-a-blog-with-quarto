@@ -74,13 +74,16 @@ If you are using RStudio, you can do this in the IDE's Build tab. Be sure to che
 :::{.callout-note}
 ## Try it out!
 
-* Create a new blog using the RStudio wizard and preview the site
-* Or, open the RStudio Cloud project and preview the site
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+
+* Create a new blog using the RStudio wizard and preview the site.
+* Or, open the RStudio Cloud project and preview the site.
 :::
 
 ## Quarto blog files
 
-When you create a new blog, you will see files automatically populated in your directory:
+When you create a new blog, these files will be automatically populated in your directory:
 
 ``` bash
 Creating project at myblog:
@@ -104,7 +107,7 @@ Creating project at myblog:
 
 ### index.qmd: Blog home page
 
-`index.qmd` will be the landing page for your site.
+The `index.qmd` file in your home directory will be the landing page for your site.
 
 * When creating a new blog, it will default to the listing page for the documents in the `posts` directory.
 * If you prefer that the About page is your landing page, you can rename your `index.qmd` to `posts.qmd` and `about.qmd` to `index.qmd`.
@@ -138,9 +141,39 @@ The title of your listing page.
 
 `contents` control what documents are included in the listing by specifying a set of input files.
 
+* `contents: posts` contains documents from the `posts/` folder.
+
 #### `sort`
 
 `sort` controls the order of the listing.
+
+::: {.panel-tabset}
+## Sort by date descending
+
+``` markdown
+  sort: "date desc"
+```
+  
+## Sort by date ascending
+
+``` markdown
+  sort: "date asc"
+```
+  
+## Sort by title ascending
+
+``` markdown
+  sort: "title asc"
+```
+
+## Sort by date and title
+
+``` markdown
+  sort:
+    - date desc
+    - title desc
+```
+:::
 
 #### `type`
 
@@ -151,11 +184,11 @@ Three default styles:
 ::: {.column-screen-inset}
 
 ::: {layout-ncol=3}
-![Grid](grid.png){group="listing"}
+![`type: grid`](images/grid.png){group="listing"}
 
-![Table](table.png){group="listing"}
+![`type: table`](images/table.png){group="listing"}
 
-![Default](default.png){group="listing"}
+![`type: default`](images/default.png){group="listing"}
 :::
 
 :::
@@ -170,13 +203,51 @@ Tooting my own horn:
 
 `categories` display the categories for your posts. The categories are read from the YAML of the documents included in the listing. 
 
+:::{.panel-tabset}
+## true
+`  categories: true`
+
+![Categories list on the right-hand side of a listing](images/categories.png)
+:::
+
+:::{.panel-tabset}
+## numbered
+`  categories: numbered`
+
+![Categories list on the right-hand side of a listing with numbers on the side denoting the count](images/categories-numbered.png)
+
+## unnumbered
+`  categories: unnumbered`
+
+![Categories list on the right-hand side of a listing without numbers](images/categories-unnumbered.png)
+
+## cloud
+`  categories: cloud`
+
+![Categories list on the right-hand side of a listing with each category in a size corresponding to how many posts are using that category](images/categories-cloud.png)
+:::
+
 #### `sort-ui`
 
 `sort-ui` provides a sorting box for readers.
 
+:::{.panel-tabset}
+## true
+`  sort-ui: true`
+
+![UI for sorting blog posts on the left-hand side of a listing page](images/sort-ui.png)
+:::
+
 #### `filter-ui`
 
 `filter-ui` provides a filtering box for readers.
+
+:::{.panel-tabset}
+## true
+`  filter-ui: true`
+
+![UI for filtering blog posts on the right-hand side of a listing page](images/filter-ui.png)
+:::
   
 #### `page-layout`
 
@@ -188,6 +259,9 @@ Tooting my own horn:
 
 :::{.callout-note}
 ## Try it out!
+
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 In the `index.qmd` file of your Quarto blog:
 
@@ -245,23 +319,23 @@ Five built-in templates:
 
 ## Jolla
 
-![Jolla](images/about-jolla.png){group="about"}
+![`template: jolla`](images/about-jolla.png){group="about"}
 
 ## Trestles
 
-![Trestles](images/about-trestles.png){group="about"}
+![`template: trestles`](images/about-trestles.png){group="about"}
 
 ## Solana
 
-![Solana](images/about-solana.png){group="about"}
+![`template: solana`](images/about-solana.png){group="about"}
 
 ## Marquee
 
-![Marquee](images/about-marquee.png){group="about"}
+![`template: marquee`](images/about-marquee.png){group="about"}
 
 ## Broadside
 
-![Broadside](images/about-broadside.png){group="about"}
+![`template: broadside`](images/about-broadside.png){group="about"}
 
 :::
 
@@ -269,20 +343,22 @@ Five built-in templates:
 
 A set of links to other resources.
 
+#### ` - icon`
+
+One of the standard Bootstrap 5 icons.
+
+#### `text`
+
+Text to display for navigation item.
+
 #### `href`
 
 Link to file contained with the project or an external URL.
 
-#### `text`
-
-Text to display for navigation item
-
-#### `icon`
-
-One of the standard Bootstrap 5 icons
-  
 :::{.callout-note}
 ## Try it out!
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 In the `about.qmd` file of your Quarto blog:
 
@@ -294,10 +370,6 @@ In the `about.qmd` file of your Quarto blog:
 ### _quarto.yml: Quarto project file
 
 The `_quarto.yml` file is the configuration file for your website.
-
-::: {.column-margin}
-The Quarto documentation lists the [possible top navigation options](https://quarto.org/docs/websites/website-navigation.html#top-navigation).
-:::
 
 ``` yaml
 project:
@@ -350,7 +422,7 @@ The icon to be shown.
 
 The link associated with the icon.
     
-There are other options available for the top level navigation. For example, if we want to change the background to an orange, we could add:
+There are other options available for the top level navigation. For example, if we want to change the background to orange, we could add:
 
 ``` yaml
   navbar:
@@ -373,11 +445,14 @@ There are also other options for the individual navigation items. For example, i
 :::{.callout-note}
 ## Try it out!
 
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+
 In the `_quarto.yml` file of your Quarto blog:
 
 * Change the background to a different color.
 * Add another hyperlink in the navigation bar.
-* Add your name to the **left** side of the navigation bar.
+* Add your name to the **left** side of the top navigation bar.
 :::
 
 #### Themes
@@ -424,6 +499,35 @@ format:
 
 Blogs can use any of the 25 Bootswatch themes included with Quarto, or you can create your own theme.
 
+:::{.panel-tabset}
+## cosmo
+``` markdown
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+```
+    
+## darkly
+
+``` markdown
+format:
+  html:
+    theme: darkly
+    css: styles.css
+```
+
+## sketchy
+
+``` markdown
+format:
+  html:
+    theme: sketchy
+    css: styles.css
+```
+
+:::
+
 #### Dark themes
 
 Quarto websites also support light and dark themes. A toggle will allow your reader to select the desired appearance.
@@ -451,21 +555,22 @@ Specify the syntax highlighting style by specifying `highlight-style` under them
 ``` yaml
 format:
   html:
-    theme:
-      light: litera
-      dark: darkly
+    theme: cosmo
     css: styles.scss
-    highlight-style: tango
+    highlight-style: eiffel
 ```
 
 :::{.callout-note}
 ## Try it out!
 
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+
 In the `_quarto.yml` file of your Quarto blog:
 
 * Change to another Bootswatch theme.
 * Add a dark theme with another Bootswatch theme.
-* Change the syntax highlighting to `a11y.`
+* Change the syntax highlighting to `eiffel`.
 :::
 
 
@@ -477,6 +582,9 @@ This is the CSS stylesheet for your website.
 
 :::{.callout-note}
 ## Try it out!
+
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 In the `styles.css` file of your Quarto blog:
 
@@ -493,4 +601,4 @@ h1.title {
 And preview your blog.
 :::
 
-Now you have built a blog with Quarto! 🎉
+You have built a blog with Quarto! 🎉

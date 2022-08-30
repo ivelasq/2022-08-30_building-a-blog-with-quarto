@@ -4,7 +4,23 @@ toc: true
 description: "Add to your blog using this workflow."
 image: thumbnail.png
 image-alt: "Drawing of a cat in front of a printing press."
+filters:
+   - lightbox      
+lightbox: auto
 ---
+
+## `/posts` folder
+
+::: column-body-outset
+::: {layout-ncol=3}
+
+![Posts folder in the blog directory](images/posts-folder.png){group="posts"}
+
+![Folders inside the posts folder](images/posts.png){group="posts"}
+
+![QMD files inside of the individual posts folders](images/posts-documents.png){group="posts"}
+:::
+:::
 
 ## Creating a new post
 
@@ -32,8 +48,8 @@ touch posts/new-post/index.qmd
 
 | Post name & location             | Slug                                                |
 |----------------------------------|-----------------------------------------------------|
-| /posts/what-is-quarto/index.qmd  | www.mysitename.com/posts/what-is-quarto             |
-| /posts/what-is-quarto/post01.qmd | www.mysitename.com/posts/what-is-quarto/post01.html |
+| `/posts/what-is-quarto/index.qmd`  | www.mysitename.com/posts/what-is-quarto             |
+| `/posts/what-is-quarto/post01.qmd` | www.mysitename.com/posts/what-is-quarto/post01.html |
 
 
 ## `/posts` folder
@@ -52,8 +68,8 @@ title-block-banner: true
 ```
 
 * `freeze`
-  * `freeze: true`: re-render during project render only when explicitly rerendered
-  * `freeze: auto`: re-render only when source changes
+  * `freeze: true`: Re-render during project render only when explicitly re-rendered.
+  * `freeze: auto`: Re-render only when source changes.
 
 * `title-block-banner`: creates a banner style title block.
   * Can specify an image or a CSS color (e.g. `"#FFDDFF"` or `red`).
@@ -83,8 +99,15 @@ The title of the post.
 
 #### `author`
 
-The author of the post. You can have multiple:
-  
+The author of the post.
+
+:::{.panel-tabset}
+## Single
+``` yaml
+author: Haku
+```
+
+## Multiple v1
 ``` yaml
 author:
   - Haku
@@ -93,6 +116,12 @@ author:
   - Nagi
 ```
 
+## Multiple v2
+``` yaml
+author: [Haku, Poki, Pichi, Nagi]
+```
+:::
+
 #### `date`
 
 The date of the post.
@@ -100,14 +129,25 @@ The date of the post.
 #### `categories`
 
 The enabled categories. You can have multiple:
-  
+
+:::{.panel-tabset}
+## Single
+``` yaml
+categories: how-to
+```
+
+## Multiple v1
 ``` yaml
 categories:
   - tutorial
   - how-to
 ```
 
-or in square braces: `[tutorial, how-to]`
+## Multiple v2
+``` yaml
+categories: [tutorial, how-to]
+```
+:::
 
 #### Drafts
 
@@ -127,9 +167,13 @@ draft: true
 
 :::{.callout-note}
 ## Try it out!
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
 
 * Create a new post in a folder called `my-first-post` with the title `index.qmd`.
 * Create the YAML for the post: `title`, `author`, and `date`.
+
+Preview/render the website and check out the listing page.
 :::
 
 Below the YAML, you will write your post.

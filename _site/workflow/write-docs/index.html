@@ -184,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#components-of-a-quarto-document" id="toc-components-of-a-quarto-document" class="nav-link active" data-scroll-target="#components-of-a-quarto-document">Components of a Quarto document</a></li>
+  <li><a href="#autonomy-of-a-quarto-document" id="toc-autonomy-of-a-quarto-document" class="nav-link active" data-scroll-target="#autonomy-of-a-quarto-document">Autonomy of a Quarto document</a></li>
   <li><a href="#markdown-basics" id="toc-markdown-basics" class="nav-link" data-scroll-target="#markdown-basics">Markdown basics</a>
   <ul class="collapse">
   <li><a href="#text-formatting" id="toc-text-formatting" class="nav-link" data-scroll-target="#text-formatting">Text Formatting</a></li>
@@ -192,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#links-images" id="toc-links-images" class="nav-link" data-scroll-target="#links-images">Links &amp; Images</a></li>
   <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
   </ul></li>
-  <li><a href="#divs-and-spans" id="toc-divs-and-spans" class="nav-link" data-scroll-target="#divs-and-spans">Divs and spans</a>
+  <li><a href="#fenced-divs" id="toc-fenced-divs" class="nav-link" data-scroll-target="#fenced-divs">Fenced divs</a>
   <ul class="collapse">
   <li><a href="#borders" id="toc-borders" class="nav-link" data-scroll-target="#borders">Borders</a></li>
   <li><a href="#callout-notes" id="toc-callout-notes" class="nav-link" data-scroll-target="#callout-notes">Callout notes</a></li>
@@ -200,6 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#using-rpythonjuliaobservable" id="toc-using-rpythonjuliaobservable" class="nav-link" data-scroll-target="#using-rpythonjuliaobservable">Using R/Python/Julia/Observable</a>
   <ul class="collapse">
+  <li><a href="#calling-engines" id="toc-calling-engines" class="nav-link" data-scroll-target="#calling-engines">Calling engines</a></li>
   <li><a href="#code-blocks" id="toc-code-blocks" class="nav-link" data-scroll-target="#code-blocks">Code Blocks</a></li>
   <li><a href="#execution-options" id="toc-execution-options" class="nav-link" data-scroll-target="#execution-options">Execution options</a></li>
   </ul></li>
@@ -239,39 +240,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </blockquote>
 <p>Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax.</p>
-<section id="components-of-a-quarto-document" class="level2">
-<h2 class="anchored" data-anchor-id="components-of-a-quarto-document">Components of a Quarto document</h2>
+<section id="autonomy-of-a-quarto-document" class="level2">
+<h2 class="anchored" data-anchor-id="autonomy-of-a-quarto-document">Autonomy of a Quarto document</h2>
 <!-- Thanks to the lightbox extension for the below! https://github.com/quarto-ext/lightbox -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="doc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Quarto document"><img src="doc.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/doc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Quarto document"><img src="images/doc.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">A Quarto document</figcaption><p></p>
 </figure>
 </div>
-<div id="fig-doc-components" class="quarto-layout-panel">
-<figure class="figure">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="yaml.png" class="lightbox" data-gallery="my-gallery" title="YAML"><img src="yaml.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/yaml.png" class="lightbox" data-gallery="my-gallery" title="YAML"><img src="images/yaml.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">YAML</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="text.png" class="lightbox" data-gallery="my-gallery" title="Text"><img src="text.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/text.png" class="lightbox" data-gallery="my-gallery" title="Text"><img src="images/text.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Text</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="code.png" class="lightbox" data-gallery="my-gallery" title="Code chunks"><img src="code.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/code.png" class="lightbox" data-gallery="my-gallery" title="Code chunks"><img src="images/code.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Code chunks</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: <strong>?(caption)</strong></figcaption><p></p>
-</figure>
 </div>
 </section>
 <section id="markdown-basics" class="level2 page-columns page-full">
@@ -279,7 +277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax:</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Reminder that the visual editor mode in RStudio provides easy ways of authoring in Markdown.</p>
+<p>Reminder that the visual editor mode in RStudio provides features for authoring in Markdown.</p>
 </div></div><section id="text-formatting" class="level3">
 <h3 class="anchored" data-anchor-id="text-formatting">Text Formatting</h3>
 <table class="table">
@@ -391,8 +389,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="divs-and-spans" class="level2">
-<h2 class="anchored" data-anchor-id="divs-and-spans">Divs and spans</h2>
+<section id="fenced-divs" class="level2">
+<h2 class="anchored" data-anchor-id="fenced-divs">Fenced divs</h2>
 <p>You can add classes, attributes, and other identifiers to regions of content using divs and spans:</p>
 <section id="borders" class="level3">
 <h3 class="anchored" data-anchor-id="borders">Borders</h3>
@@ -453,27 +451,55 @@ Note
 <section id="using-rpythonjuliaobservable" class="level2">
 <h2 class="anchored" data-anchor-id="using-rpythonjuliaobservable">Using R/Python/Julia/Observable</h2>
 <p>Quarto supports executable code blocks within markdown.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">with</span>(<span class="fu">plot</span>(hp, mpg))</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="calling-engines" class="level3">
+<h3 class="anchored" data-anchor-id="calling-engines">Calling engines</h3>
 <ul>
-<li>Need to have the appropriate engine installed</li>
-<li>Quarto can guess the engine or you can call it explicitly in the YAML</li>
+<li>Need to have the appropriate engine installed.</li>
+<li>Quarto can guess the engine or you can call it explicitly in the YAML.</li>
 </ul>
-<h3 align="right" class="anchored">
-<p><a href="https://quarto.org/docs/computations/python.html">Quarto computations documentation</a> <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></p>
-</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "matplotlib demo"</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "ggplot2 demo"</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Norah Jones"</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "5/22/2021"</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-width: 8</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-height: 4</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="code-blocks" class="level3">
 <h3 class="anchored" data-anchor-id="code-blocks">Code Blocks</h3>
 <p>Code blocks that use braces around the language name (e.g.&nbsp;<code>{r}</code>) are executable, and will be run by Quarto during render.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="index_files/figure-html/fig-airquality-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Temperature and ozone level."><img src="index_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Temperature and ozone level.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -482,20 +508,20 @@ Note
 <section id="execution-options" class="level3">
 <h3 class="anchored" data-anchor-id="execution-options">Execution options</h3>
 <p>You can customize executed code with execution options. They can be specified globally:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"My Document"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">jupyter</span><span class="kw">:</span><span class="at"> python3</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Or on a per-chunk basis:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>])</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>])</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note the use of the hashpipe <code>#|</code> at the top of the chunk.</p>
 <h3 align="right" class="anchored">
 <p><a href="https://quarto.org/docs/computations/execution-options.html#output-options">Quarto execution options documentation</a> <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i></p>
@@ -509,7 +535,7 @@ Note
 <li>Use the RStudio “Render” button or the “Build” tab</li>
 <li>Use the command line interface</li>
 </ul>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -520,6 +546,7 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>/post/my-new-post/index.html</code> file of your Quarto blog:</p>
 <ul>
 <li>Add a heading 1</li>
@@ -527,9 +554,9 @@ Try it out!
 <li>Add a tabset.</li>
 <li>Include this code chunk:</li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">with</span>(<span class="fu">plot</span>(hp, mpg))</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">|&gt;</span> <span class="fu">with</span>(<span class="fu">plot</span>(hp, mpg))</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then, render the blog.</p>
 </div>
 </div>
@@ -637,7 +664,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 

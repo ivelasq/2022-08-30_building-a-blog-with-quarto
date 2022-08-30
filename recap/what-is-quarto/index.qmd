@@ -26,11 +26,11 @@ Quarto® is an open-source scientific and technical publishing system built on P
 ::: panel-tabset
 ## knitr
 
-![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc that produces the reports](knitr.png)
+![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc that produces the reports](images/knitr.png)
 
 ## Quarto
 
-![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc with Lua filters that produces the reports](quarto.png)
+![A diagram of how the knitr package works, from Rmd file to knitr to md to pandoc with Lua filters that produces the reports](images/quarto.png)
 :::
 
 ## What it can do
