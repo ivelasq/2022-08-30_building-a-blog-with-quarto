@@ -108,5 +108,5 @@ quarto --help
 
 * Report bugs on GitHub: [https://github.com/quarto-dev/quarto-cli](https://github.com/quarto-dev/quarto-cli)
   * Check out the [Quarto Tip a Day post on asking for help](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/15-help/)
+* Flag friendly folks on Twitter with #QuartoPub and [RStudio Community](community.rstudio.com/tag/quarto)(community.rstudio.com/tag/quarto)
 * Check out the [FAQ](https://quarto.org/docs/faq/)
-* Flag friendly folks on Twitter with #QuartoPub

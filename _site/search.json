@@ -74,7 +74,7 @@
     "href": "recap/what-is-quarto/index.html#need-help",
     "title": "What is Quarto?",
     "section": "Need help?",
-    "text": "Need help?\n\nSee what Quarto can do by running this in your Terminal:\n\n#| collapse = TRUE\nquarto --help\n\nReport bugs on GitHub: https://github.com/quarto-dev/quarto-cli\n\nCheck out the Quarto Tip a Day post on asking for help\n\nCheck out the FAQ\nFlag friendly folks on Twitter with #QuartoPub"
+    "text": "Need help?\n\nSee what Quarto can do by running this in your Terminal:\n\n#| collapse = TRUE\nquarto --help\n\nReport bugs on GitHub: https://github.com/quarto-dev/quarto-cli\n\nCheck out the Quarto Tip a Day post on asking for help\n\nFlag friendly folks on Twitter with #QuartoPub and RStudio Community(community.rstudio.com/tag/quarto)\nCheck out the FAQ"
   },
   {
     "objectID": "LICENSE.html",
