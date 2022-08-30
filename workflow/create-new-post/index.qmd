@@ -76,7 +76,7 @@ title-block-banner: true
 
 :::{.callout-note}
 ## Try it out!
-In the `index.qmd` file of your Quarto blog:
+In the `/posts/_metadata.yml` file of your Quarto blog:
 
 * Change the color of `title-block-banner` to "#FFA500."
 * Visit one of the posts to see the new color.
