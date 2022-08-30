@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Building a blog with Quarto",
+    "objectID": "recap/rstudio-and-quarto/index.html",
+    "href": "recap/rstudio-and-quarto/index.html",
+    "title": "RStudio & Quarto",
     "section": "",
-    "text": "Presented by Isabella Velásquez"
+    "text": "Warning\n\n\n\nTo follow along, you’ll need:\n\nR & RStudio installed (find the latest RStudio release here)\nQuarto installed – Quarto is now included with RStudio v2022.07.1+"
+  },
+  {
+    "objectID": "recap/rstudio-and-quarto/index.html#using-quarto-in-the-rstudio-ide",
+    "href": "recap/rstudio-and-quarto/index.html#using-quarto-in-the-rstudio-ide",
+    "title": "RStudio & Quarto",
+    "section": "Using Quarto in the RStudio IDE",
+    "text": "Using Quarto in the RStudio IDE\n\nVisual editor\nRStudio’s visual editor mode includes extensive support for authoring documents.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisual editor documentation \n\n\n\nOutline"
+  },
+  {
+    "objectID": "recap/rstudio-and-quarto/index.html#yaml-intelligence",
+    "href": "recap/rstudio-and-quarto/index.html#yaml-intelligence",
+    "title": "RStudio & Quarto",
+    "section": "YAML intelligence",
+    "text": "YAML intelligence\nYAML intelligence is available for project files, YAML front matter, and executable cell options.\n\n\n\n\n\n\n\n\n\n\n\n\n\n  Incorrect YAML fields will be highlighted:"
+  },
+  {
+    "objectID": "recap/why-quarto/index.html",
+    "href": "recap/why-quarto/index.html",
+    "title": "Using Quarto for a blog",
+    "section": "",
+    "text": "# I write my code here\n# and I see the plot underneath.\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\npalmerpenguins::penguins %>% \n  ggplot2::ggplot(aes(x = bill_length_mm, y = bill_depth_mm)) +\n  geom_point()\n\n\n\n\n\nSyntax highlighting\nExecutable code\nReproducibility\nWorkflow\nControl"
+  },
+  {
+    "objectID": "recap/why-quarto/index.html#do-i-need-to-use-quarto-to-create-a-blog",
+    "href": "recap/why-quarto/index.html#do-i-need-to-use-quarto-to-create-a-blog",
+    "title": "Using Quarto for a blog",
+    "section": "Do I need to use Quarto to create a blog?",
+    "text": "Do I need to use Quarto to create a blog?\nYou can keep using blogdown, distill, etc., to create your blog.\n\n\n\n\nR Markdown is not going away. Rest assured that we will still actively maintain it.\nYihui Xie, With Quarto Coming, is R Markdown Going Away? No.\n\n\nFAQ for R Markdown Users"
   },
   {
     "objectID": "recap/what-is-quarto/index.html",
@@ -201,6 +229,13 @@
     "title": "Migrate from R Markdown",
     "section": "Code chunk options",
     "text": "Code chunk options\nOne important difference between R Markdown documents and Quarto documents is that in Quarto chunk options are typically included in “hashpipes” at the top of code chunks rather than within the line that begins the chunk:\n\n\n\n```{r, echo = FALSE, fig-cap = \"Air Quality\"}\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n```{r}\n#| echo: false\n#| fig-cap: \"Air Quality\"\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n        geom_point() + \n        geom_smooth(method = \"loess\", se = FALSE)\n```\n\n\n\nIn the newest version of knitr (v1.40), use the function convert_chunk_header() to convert the old in-header chunk options to the new in-body chunk options.\n# convert to Quarto doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.qmd\")\n# convert to .Rmd doc with in-body chunk options\nknitr::convert_chunk_header(\"to-convert.Rmd\", \"converted.Rmd\") \nThis will result in the following files:\n\n\n\n\n\n\n\nBefore conversion\n\n\n\n\n\n\n\nAfter conversion\n\n\n\n\n\n\n\n\n\n\n\n\nTry it out!\n\n\n\n rstd.io/quarto-blog-exercise-repo  rstd.io/quarto-blog-exercise-cloud\nIn the exercise blog:\n\nConvert the .Rmd file in rmarkdown-post to .qmd, and move to a new post/my-new-qmd-post folder."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Building a blog with Quarto",
+    "section": "",
+    "text": "Presented by Isabella Velásquez"
   },
   {
     "objectID": "workflow/create-new-post/index.html",
