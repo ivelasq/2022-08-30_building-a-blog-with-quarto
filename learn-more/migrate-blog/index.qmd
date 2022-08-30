@@ -19,6 +19,9 @@ If you run into any errors, go into the file to see what occurred.
 :::{.callout-note}
 ## Try it out!
 
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
+
 In the exercise blog:
 
 * Render the `.Rmd` file in the `rmarkdown-post` folder.
@@ -72,6 +75,9 @@ This will result in the following files:
 
 :::{.callout-note}
 ## Try it out!
+
+[{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the exercise blog:
 

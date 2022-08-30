@@ -15,7 +15,7 @@ lightbox: auto
 Follow along in the exercises:
 
 * [{{< fa brands github size=1.4xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo
-* [![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+* <a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 :::
 
@@ -75,7 +75,7 @@ If you are using RStudio, you can do this in the IDE's Build tab. Be sure to che
 ## Try it out!
 
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 * Create a new blog using the RStudio wizard and preview the site.
 * Or, open the RStudio Cloud project and preview the site.
@@ -261,7 +261,7 @@ Tooting my own horn:
 ## Try it out!
 
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the `index.qmd` file of your Quarto blog:
 
@@ -358,7 +358,7 @@ Link to file contained with the project or an external URL.
 :::{.callout-note}
 ## Try it out!
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the `about.qmd` file of your Quarto blog:
 
@@ -446,7 +446,7 @@ There are also other options for the individual navigation items. For example, i
 ## Try it out!
 
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the `_quarto.yml` file of your Quarto blog:
 
@@ -507,6 +507,8 @@ format:
     theme: cosmo
     css: styles.css
 ```
+
+![Website in cosmo theme](images/theme-cosmo.png)
     
 ## darkly
 
@@ -517,6 +519,8 @@ format:
     css: styles.css
 ```
 
+![Website in darkly theme](images/theme-darkly)
+
 ## sketchy
 
 ``` markdown
@@ -525,6 +529,8 @@ format:
     theme: sketchy
     css: styles.css
 ```
+
+![Website in sketchy theme](images/theme-sketchy)
 
 :::
 
@@ -542,6 +548,8 @@ format:
       dark: darkly
 ```
 
+<script src="https://fast.wistia.com/embed/medias/nw16mvzjur.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:36.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_nw16mvzjur videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/nw16mvzjur/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+
 #### Syntax highlighting
 
 You can also change the syntax highlighting for your code blocks. Run the below to see all the options:
@@ -550,8 +558,25 @@ You can also change the syntax highlighting for your code blocks. Run the below 
 quarto pandoc --list-highlight-languages
 ```
 
+:::{.column-margin}
+You can use YAML intelligence to find your perfect highlight style too!
+:::
+
 Specify the syntax highlighting style by specifying `highlight-style` under theme:
 
+:::{.panel-tabset}
+## espresso
+``` yaml
+format:
+  html:
+    theme: cosmo
+    css: styles.scss
+    highlight-style: espresso
+```
+
+![Code in espresso highlighting](images/highlight-espresso.png)
+
+## eiffel
 ``` yaml
 format:
   html:
@@ -560,17 +585,32 @@ format:
     highlight-style: eiffel
 ```
 
+![Code in eiffel highlighting](images/highlight-eiffel.png)
+
+## zenburn
+``` yaml
+format:
+  html:
+    theme: cosmo
+    css: styles.scss
+    highlight-style: zenburn
+```
+
+![Code in zenburn highlighting](images/highlight-zenburn.png)
+
+:::
+
 :::{.callout-note}
 ## Try it out!
 
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the `_quarto.yml` file of your Quarto blog:
 
 * Change to another Bootswatch theme.
 * Add a dark theme with another Bootswatch theme.
-* Change the syntax highlighting to `eiffel`.
+* Change the syntax highlighting to `espresso`.
 :::
 
 
@@ -584,7 +624,7 @@ This is the CSS stylesheet for your website.
 ## Try it out!
 
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 In the `styles.css` file of your Quarto blog:
 

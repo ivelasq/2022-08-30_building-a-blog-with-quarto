@@ -36,7 +36,7 @@ Want to try the exercises?
 * Clone the GitHub repository and follow along on your computer
   * [{{< fa brands github size=1.4xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo
 * Work in the RStudio Cloud project
-  * [![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+  * <a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 ::: column-margin
 Today's recording will be available on YouTube!

@@ -33,9 +33,11 @@ You can publish Quarto in a variety of places, including popular publishing serv
 :::{.callout-note}
 ## Try it out!
 
-* Create a QuartoPub account at https://quartopub.com/.
+* Create a Quarto Pub account at https://quartopub.com/.
 
 :::
+
+### Publishing to Quarto Pub on your local computer
 
 After creating an account, run `quarto publish` in the directory of your blog. If you haven’t published to Quarto Pub before, the publish command will prompt you to authenticate:
 
@@ -66,6 +68,24 @@ The `_publish.yml` file is automatically created (or updated) whenever you execu
     - id: # site ID here
       url: # site URL here
 ```
+
+### Publishing to Quarto Pub from RStudio Cloud
+
+In your Quarto Pub account, click your profile picture and click "Manage Profile and Tokens".
+
+![](publish-account.png)
+
+Create a new token. Call it 'cloud'. Save the token to your clipboard.
+
+![](publish-token.png)
+
+In the RStudio Cloud terminal, type `export QUARTO_PUB_AUTH_TOKEN=` then your token in quotation marks.
+
+``` bash
+export QUARTO_PUB_AUTH_TOKEN="yourtoken-abc123"
+```
+
+Then type `quarto publish`. Click the URL for the published blog.
 
 :::{.callout-note}
 ## Try it out!

@@ -245,7 +245,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- Thanks to the lightbox extension for the below! https://github.com/quarto-ext/lightbox -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/doc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="A Quarto document"><img src="images/doc.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/doc.png" class="lightbox" title="A Quarto document" data-gallery="quarto-lightbox-gallery-1"><img src="images/doc.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">A Quarto document</figcaption><p></p>
 </figure>
 </div>
@@ -253,19 +253,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/yaml.png" class="lightbox" data-gallery="my-gallery" title="YAML"><img src="images/yaml.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/yaml.png" class="lightbox" title="YAML" data-gallery="my-gallery"><img src="images/yaml.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">YAML</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/text.png" class="lightbox" data-gallery="my-gallery" title="Text"><img src="images/text.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/text.png" class="lightbox" title="Text" data-gallery="my-gallery"><img src="images/text.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Text</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/code.png" class="lightbox" data-gallery="my-gallery" title="Code chunks"><img src="images/code.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/code.png" class="lightbox" title="Code chunks" data-gallery="my-gallery"><img src="images/code.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Code chunks</figcaption><p></p>
 </figure>
 </div>
@@ -498,7 +498,7 @@ Note
 <div class="cell-output-display">
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><a href="index_files/figure-html/fig-airquality-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Temperature and ozone level."><img src="index_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="index_files/figure-html/fig-airquality-1.png" class="lightbox" title="Temperature and ozone level." data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption><p></p>
 </figure>
 </div>
@@ -546,7 +546,7 @@ Try it out!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816"><img src="https://img.shields.io/badge/launch-cloud-75aadb?style=flat&amp;logo=rstudio.png" class="img-fluid" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
+<p><a href="https://rstd.io/quarto-blog-exercise-repo"><i class="fa-brands fa-github fa-1xl" aria-hidden="true"></i></a> rstd.io/quarto-blog-exercise-repo<br> <a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud</p>
 <p>In the <code>/post/my-new-post/index.html</code> file of your Quarto blog:</p>
 <ul>
 <li>Add a heading 1</li>
@@ -664,7 +664,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

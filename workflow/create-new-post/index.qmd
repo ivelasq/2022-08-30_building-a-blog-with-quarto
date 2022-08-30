@@ -72,14 +72,32 @@ title-block-banner: true
   * `freeze: auto`: Re-render only when source changes.
 
 * `title-block-banner`: creates a banner style title block.
-  * Can specify an image or a CSS color (e.g. `"#FFDDFF"` or `red`).
+
+:::{.panel-tabset}
+### Banner color
+
+``` markdown
+  title-block-banner: "#FFDDFF"
+```
+
+![](images/banner-color.png)
+
+### Banner image
+
+``` markdown
+  title-block-banner: "banner.jpg"
+```
+
+![](images/banner-image.png)
+
+:::
 
 :::{.callout-note}
 ## Try it out!
 In the `/posts/_metadata.yml` file of your Quarto blog:
 
-* Change the color of `title-block-banner` to "#FFA500."
-* Visit one of the posts to see the new color.
+* Change the color of `title-block-banner` to `"#FFA500"`.
+* Change it again to `banner.jpg`.
 :::
 
 ### `/posts/index.qmd` file
@@ -168,7 +186,7 @@ draft: true
 :::{.callout-note}
 ## Try it out!
 [{{< fa brands github size=1xl >}}](https://rstd.io/quarto-blog-exercise-repo) rstd.io/quarto-blog-exercise-repo<br>
-[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4404816) rstd.io/quarto-blog-exercise-cloud
+<a href="https://rstudio.cloud/project/4404816" target="_blank"><img src="https://img.shields.io/badge/launch-cloud-75aadb?logo=rstudio" alt="Launch RStudio Cloud"></a> rstd.io/quarto-blog-exercise-cloud
 
 * Create a new post in a folder called `my-first-post` with the title `index.qmd`.
 * Create the YAML for the post: `title`, `author`, and `date`.
