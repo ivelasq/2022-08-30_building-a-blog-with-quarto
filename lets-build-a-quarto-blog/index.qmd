@@ -112,6 +112,10 @@ The `index.qmd` file in your home directory will be the landing page for your si
 * When creating a new blog, it will default to the listing page for the documents in the `posts` directory.
 * If you prefer that the About page is your landing page, you can rename your `index.qmd` to `posts.qmd` and `about.qmd` to `index.qmd`.
 
+::: {column-body-outset}
+::: {layout-ncol="2"}
+![Default listing page](images/default-listing.png)
+
 ``` yaml
 ---
 title: "my-new-blog"
@@ -125,7 +129,10 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
+
 ```
+:::
+:::
 
 Let's go through each line:
 
@@ -275,6 +282,10 @@ In the `index.qmd` file of your Quarto blog:
 
 The `about.qmd` document includes additional information on the blog and its author. 
 
+::: {column-body-outset}
+::: {layout-ncol="2"}
+![Default about page](images/default-about.png)
+
 ``` yaml
 ---
 title: "About"
@@ -294,6 +305,8 @@ about:
 
 ---
 ```
+:::
+:::
 
 Let's go through each line:
 
